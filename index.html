@@ -213,28 +213,16 @@
     .brand {
       display: inline-flex;
       align-items: center;
-      gap: 0.65rem;
       text-decoration: none;
       font-family: "Space Grotesk", sans-serif;
       font-size: 0.88rem;
       font-weight: 700;
-      letter-spacing: 0.22em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--ink-pure);
       position: relative;
       z-index: 2;
     }
-
-    .brand-mark {
-      width: 32px;
-      height: 32px;
-      border-radius: 10px;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(135deg, rgba(196, 134, 63, 0.2), rgba(94, 197, 189, 0.1));
-      border: 1px solid var(--line-strong);
-    }
-    .brand-mark svg { width: 20px; height: 20px; display: block; }
 
     .nav-links {
       display: flex;
@@ -1364,9 +1352,7 @@
     /* ─── Mobile ─── */
     @media (max-width: 640px) {
       .nav { width: calc(100% - 14px); padding: 0.55rem 0.55rem 0.55rem 0.7rem; }
-      .brand { font-size: 0.75rem; letter-spacing: 0.1em; }
-      .brand-mark { width: 28px; height: 28px; }
-      .brand-mark svg { width: 16px; height: 16px; }
+      .brand { font-size: 0.75rem; letter-spacing: 0.06em; }
       .nav-cta { font-size: 0.65rem; padding: 0.45rem 0.75rem; }
 
       .hero { padding: 5.5rem 1rem 2rem; }
@@ -1411,15 +1397,7 @@
   <canvas class="ambient-canvas" id="ambientCanvas" aria-hidden="true"></canvas>
 
   <nav class="nav" id="navbar" aria-label="Primary">
-    <a href="#main" class="brand" aria-label="SYNDRIX home">
-      <span class="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 48 48" fill="none">
-          <path d="M10 32 24 8l14 24H10Z" stroke="#c4863f" stroke-width="3" stroke-linejoin="round"/>
-          <path d="M16 32h22L24 40 10 32h6Z" fill="#5ec5bd"/>
-        </svg>
-      </span>
-      S Y N D R I X
-    </a>
+    <a href="#main" class="brand" aria-label="SYNDRIX home">SYNDRIX</a>
     <div class="nav-links" role="list">
       <div class="nav-indicator"></div>
       <a href="#about" role="listitem">About</a>

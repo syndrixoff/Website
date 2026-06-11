@@ -166,7 +166,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 1rem;
-      padding: 0.55rem 0.55rem 0.55rem 1.2rem;
+      padding: 0.7rem 0.7rem 0.7rem 1.5rem; /* Enlarged padding */
       border: 1px solid rgba(232, 223, 206, 0.08);
       border-radius: 999px;
       /* Upgraded liquid glass styling: multi-layered gradient refraction */
@@ -215,7 +215,7 @@
       align-items: center;
       text-decoration: none;
       font-family: "Space Grotesk", sans-serif;
-      font-size: 0.88rem;
+      font-size: 1rem; /* Enlarged brand font */
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -227,18 +227,18 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 0.15rem;
+      gap: 0.2rem;
       position: relative;
       z-index: 2;
     }
     .nav-links a {
       color: var(--muted);
       text-decoration: none;
-      font-size: 0.76rem;
+      font-size: 0.85rem; /* Enlarged links font */
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      padding: 0.6rem 0.85rem;
+      padding: 0.68rem 1.05rem; /* Enlarged link padding */
       border-radius: 999px;
       transition: color 0.3s ease;
       position: relative;
@@ -250,7 +250,7 @@
     }
     .nav-indicator {
       position: absolute;
-      height: 74%;
+      height: 76%; /* Adjusted height */
       border-radius: 999px;
       /* Liquid glass drop styling with brand copper glow */
       background: linear-gradient(180deg, rgba(232, 223, 206, 0.14) 0%, rgba(232, 223, 206, 0.04) 100%);
@@ -264,7 +264,7 @@
       z-index: 1;
       opacity: 0;
       transform: scale(0.9);
-      top: 13%;
+      top: 12%; /* Adjusted alignment */
       /* Transition is updated dynamically in JS for the stretch effect */
     }
 
@@ -272,9 +272,9 @@
       background: var(--copper);
       color: #0c0b09;
       border-radius: 999px;
-      padding: 0.65rem 1.1rem;
+      padding: 0.72rem 1.3rem; /* Enlarged CTA padding */
       font-weight: 900;
-      font-size: 0.76rem;
+      font-size: 0.85rem; /* Enlarged CTA font */
       letter-spacing: 0.02em;
       text-decoration: none;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -1305,9 +1305,9 @@
 
     /* ─── Tablet Layout (under 980px) ─── */
     @media (max-width: 980px) {
-      .nav { top: 10px; border-radius: 20px; padding: 0.6rem; }
+      .nav { top: 10px; border-radius: 20px; padding: 0.7rem 0.8rem; }
       .nav-links { display: none; }
-      .nav-cta { font-size: 0.72rem; padding: 0.55rem 0.9rem; }
+      .nav-cta { font-size: 0.8rem; padding: 0.65rem 1.1rem; }
 
       .section-head { grid-template-columns: 1fr; gap: 1rem; }
       .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -1351,9 +1351,9 @@
 
     /* ─── Mobile ─── */
     @media (max-width: 640px) {
-      .nav { width: calc(100% - 14px); padding: 0.55rem 0.55rem 0.55rem 0.7rem; }
-      .brand { font-size: 0.75rem; letter-spacing: 0.06em; }
-      .nav-cta { font-size: 0.65rem; padding: 0.45rem 0.75rem; }
+      .nav { width: calc(100% - 14px); padding: 0.65rem 0.65rem 0.65rem 0.9rem; }
+      .brand { font-size: 0.85rem; letter-spacing: 0.06em; }
+      .nav-cta { font-size: 0.72rem; padding: 0.55rem 0.9rem; }
 
       .hero { padding: 5.5rem 1rem 2rem; }
       h1 { font-size: clamp(2.8rem, 15vw, 4.2rem); }

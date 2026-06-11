@@ -38,17 +38,67 @@
     body {
       margin: 0;
       min-height: 100vh;
-      background:
-        radial-gradient(ellipse at 80% 0%, rgba(94, 197, 189, 0.08), transparent 36rem),
-        radial-gradient(ellipse at 10% 22%, rgba(196, 134, 63, 0.1), transparent 34rem),
-        radial-gradient(ellipse at 50% 100%, rgba(196, 134, 63, 0.04), transparent 40rem),
-        linear-gradient(180deg, #0c0b09 0%, #12100e 50%, #0c0b09 100%);
+      background: linear-gradient(180deg, #0c0b09 0%, #12100e 50%, #0c0b09 100%);
       color: var(--ink);
       font-family: Inter, ui-sans-serif, sans-serif;
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
       line-height: 1.6;
+    }
+
+    /* ─── Dynamic Ambient Background Glows ─── */
+    .ambient-glows {
+      position: fixed;
+      inset: 0;
+      z-index: -4;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .glow-orb {
+      position: absolute;
+      border-radius: 50%;
+      will-change: transform;
+    }
+    .glow-1 {
+      top: -25%;
+      right: -10%;
+      width: min(900px, 85vw);
+      height: min(900px, 85vw);
+      background: radial-gradient(circle, rgba(94, 197, 189, 0.08) 0%, transparent 70%);
+      animation: float-1 40s infinite alternate ease-in-out;
+    }
+    .glow-2 {
+      top: 5%;
+      left: -20%;
+      width: min(850px, 80vw);
+      height: min(850px, 80vw);
+      background: radial-gradient(circle, rgba(196, 134, 63, 0.1) 0%, transparent 70%);
+      animation: float-2 35s infinite alternate ease-in-out;
+    }
+    .glow-3 {
+      bottom: -30%;
+      left: 10%;
+      width: min(1100px, 90vw);
+      height: min(1100px, 90vw);
+      background: radial-gradient(circle, rgba(196, 134, 63, 0.04) 0%, transparent 70%);
+      animation: float-3 45s infinite alternate ease-in-out;
+    }
+
+    @keyframes float-1 {
+      0% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(-10%, 15%) scale(1.1); }
+      100% { transform: translate(5%, -5%) scale(0.9); }
+    }
+    @keyframes float-2 {
+      0% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(15%, -10%) scale(0.95); }
+      100% { transform: translate(-10%, 10%) scale(1.05); }
+    }
+    @keyframes float-3 {
+      0% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(-8%, -8%) scale(1.1); }
+      100% { transform: translate(12%, 5%) scale(0.9); }
     }
 
     body::before {
@@ -1352,6 +1402,11 @@
   </style>
 </head>
 <body>
+  <div class="ambient-glows" aria-hidden="true">
+    <div class="glow-orb glow-1"></div>
+    <div class="glow-orb glow-2"></div>
+    <div class="glow-orb glow-3"></div>
+  </div>
   <a class="skip-link" href="#main">Skip to content</a>
   <canvas class="ambient-canvas" id="ambientCanvas" aria-hidden="true"></canvas>
 

@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.vite/
+.playwright-mcp/
+*.log
+*.png
+*.jpg
+*.yml
+page-snapshot.yml
+sondaven-accessibility.yml
+tenbinlabs_snapshot.yml

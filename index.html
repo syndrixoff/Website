@@ -116,12 +116,48 @@
       align-items: center;
       justify-content: space-between;
       gap: 1rem;
-      padding: 0.7rem 0.7rem 0.7rem 1rem;
-      border: 1px solid rgba(232, 223, 206, 0.12);
+      padding: 0.55rem 0.55rem 0.55rem 1.2rem;
+      border: 1px solid rgba(232, 223, 206, 0.08);
       border-radius: 999px;
-      background: rgba(18, 16, 14, 0.45);
-      backdrop-filter: blur(24px) saturate(1.8);
-      box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(232, 223, 206, 0.15);
+      /* Upgraded liquid glass styling: multi-layered gradient refraction */
+      background: linear-gradient(135deg, rgba(232, 223, 206, 0.07), rgba(232, 223, 206, 0.02) 50%, rgba(12, 11, 9, 0.6));
+      backdrop-filter: blur(28px) saturate(2.2);
+      -webkit-backdrop-filter: blur(28px) saturate(2.2);
+      box-shadow: 
+        0 24px 60px -15px rgba(0, 0, 0, 0.75),
+        inset 0 1px 0 0 rgba(232, 223, 206, 0.25),
+        inset 0 -1px 0 0 rgba(0, 0, 0, 0.5),
+        inset 0 0 16px rgba(232, 223, 206, 0.04);
+      transition: all 0.4s var(--ease);
+      overflow: hidden; /* For mouse glow containment */
+    }
+    /* Dynamic mouse glow refraction highlight */
+    .nav::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: radial-gradient(
+        150px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(232, 223, 206, 0.12),
+        transparent 80%
+      );
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .nav:hover::before {
+      opacity: 1;
+    }
+    .nav:hover {
+      border-color: rgba(232, 223, 206, 0.16);
+      box-shadow: 
+        0 30px 70px -12px rgba(0, 0, 0, 0.8),
+        inset 0 1px 0 0 rgba(232, 223, 206, 0.35),
+        inset 0 -1px 0 0 rgba(0, 0, 0, 0.6),
+        inset 0 0 20px rgba(232, 223, 206, 0.08);
+      transform: translateX(-50%) translateY(1px);
     }
 
     .brand {
@@ -135,6 +171,8 @@
       letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--ink-pure);
+      position: relative;
+      z-index: 2;
     }
 
     .brand-mark {
@@ -152,6 +190,8 @@
       display: flex;
       align-items: center;
       gap: 0.15rem;
+      position: relative;
+      z-index: 2;
     }
     .nav-links a {
       color: var(--muted);
@@ -162,9 +202,33 @@
       text-transform: uppercase;
       padding: 0.6rem 0.85rem;
       border-radius: 999px;
-      transition: color 0.2s ease, background 0.2s ease;
+      transition: color 0.3s ease;
+      position: relative;
+      z-index: 2;
     }
-    .nav-links a:hover { color: var(--ink); background: rgba(232, 223, 206, 0.05); }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--ink);
+    }
+    .nav-indicator {
+      position: absolute;
+      height: 74%;
+      border-radius: 999px;
+      /* Liquid glass drop styling with brand copper glow */
+      background: linear-gradient(180deg, rgba(232, 223, 206, 0.14) 0%, rgba(232, 223, 206, 0.04) 100%);
+      border: 1px solid rgba(232, 223, 206, 0.22);
+      box-shadow: 
+        0 8px 24px -6px rgba(0, 0, 0, 0.5), 
+        inset 0 1px 2px rgba(255, 255, 255, 0.25),
+        inset 0 -1px 2px rgba(0, 0, 0, 0.35),
+        0 0 16px rgba(196, 134, 63, 0.12);
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0;
+      transform: scale(0.9);
+      top: 13%;
+      /* Transition is updated dynamically in JS for the stretch effect */
+    }
 
     .nav-cta {
       background: var(--copper);
@@ -177,6 +241,8 @@
       text-decoration: none;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
       white-space: nowrap;
+      position: relative;
+      z-index: 2;
     }
     .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(196, 134, 63, 0.22); }
 
@@ -1300,6 +1366,7 @@
       S Y N D R I X
     </a>
     <div class="nav-links" role="list">
+      <div class="nav-indicator"></div>
       <a href="#about" role="listitem">About</a>
       <a href="#services" role="listitem">Services</a>
       <a href="#process" role="listitem">Process</a>
@@ -1877,6 +1944,134 @@
       };
       startLoop();
     }
+
+    // Liquid Glass Navigation sliding pill & mouse shine
+    const navElement = document.getElementById('navbar');
+    const navLinks = document.querySelector('.nav-links');
+    const indicator = document.querySelector('.nav-indicator');
+    const links = document.querySelectorAll('.nav-links a');
+    let activeLink = null;
+    let isInitial = true;
+
+    // Mouse glow follower coordinates
+    if (navElement) {
+      navElement.addEventListener('mousemove', (e) => {
+        const rect = navElement.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        navElement.style.setProperty('--mouse-x', `${x}px`);
+        navElement.style.setProperty('--mouse-y', `${y}px`);
+      });
+    }
+
+    function updateIndicator(link) {
+      if (!link || !indicator) {
+        if (indicator) {
+          indicator.style.opacity = '0';
+          indicator.style.transform = 'scale(0.9)';
+        }
+        return;
+      }
+
+      const parentWidth = navLinks.offsetWidth;
+      const targetLeft = link.offsetLeft;
+      const targetRight = parentWidth - (targetLeft + link.offsetWidth);
+
+      if (isInitial || indicator.style.opacity === '0') {
+        // Instant update without delay/stretch when first showing up
+        indicator.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
+        indicator.style.left = `${targetLeft}px`;
+        indicator.style.right = `${targetRight}px`;
+        indicator.style.opacity = '1';
+        indicator.style.transform = 'scale(1)';
+        isInitial = false;
+        // force reflow
+        indicator.offsetHeight;
+        return;
+      }
+
+      // Read current left position to detect direction
+      const currentLeft = parseFloat(indicator.style.left) || 0;
+      const movingRight = targetLeft > currentLeft;
+
+      // Asymmetric spring-like delays to create the liquid stretching effect
+      if (movingRight) {
+        // Moving right: right edge stretches first, left edge follows
+        indicator.style.transition = `
+          left 0.38s cubic-bezier(0.25, 1, 0.5, 1) 0.05s,
+          right 0.32s cubic-bezier(0.25, 1, 0.5, 1),
+          opacity 0.25s ease,
+          transform 0.25s ease
+        `;
+      } else {
+        // Moving left: left edge stretches first, right edge follows
+        indicator.style.transition = `
+          left 0.32s cubic-bezier(0.25, 1, 0.5, 1),
+          right 0.38s cubic-bezier(0.25, 1, 0.5, 1) 0.05s,
+          opacity 0.25s ease,
+          transform 0.25s ease
+        `;
+      }
+
+      indicator.style.left = `${targetLeft}px`;
+      indicator.style.right = `${targetRight}px`;
+      indicator.style.opacity = '1';
+      indicator.style.transform = 'scale(1)';
+    }
+
+    links.forEach(link => {
+      link.addEventListener('mouseenter', () => {
+        updateIndicator(link);
+      });
+      link.addEventListener('click', () => {
+        activeLink = link;
+        links.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+        updateIndicator(link);
+      });
+    });
+
+    if (navLinks) {
+      navLinks.addEventListener('mouseleave', () => {
+        updateIndicator(activeLink);
+      });
+    }
+
+    // Set active link based on current section viewport
+    const sections = document.querySelectorAll('section[id]');
+    const navObs = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          const id = e.target.getAttribute('id');
+          const href = `#${id}`;
+          const matched = Array.from(links).find(l => l.getAttribute('href') === href);
+          
+          links.forEach(l => l.classList.remove('active'));
+          if (matched) {
+            matched.classList.add('active');
+            activeLink = matched;
+            updateIndicator(matched);
+          } else {
+            activeLink = null;
+            updateIndicator(null);
+          }
+        }
+      });
+    }, { threshold: 0.35, rootMargin: '-10% 0px -40% 0px' });
+
+    sections.forEach(s => navObs.observe(s));
+
+    // Handle window resize to keep position in sync
+    window.addEventListener('resize', () => {
+      if (activeLink && indicator) {
+        indicator.style.transition = 'none';
+        const parentWidth = navLinks.offsetWidth;
+        const targetLeft = activeLink.offsetLeft;
+        const targetRight = parentWidth - (targetLeft + activeLink.offsetWidth);
+        indicator.style.left = `${targetLeft}px`;
+        indicator.style.right = `${targetRight}px`;
+      }
+    });
   </script>
 </body>
 </html>

@@ -1377,11 +1377,18 @@
     }
 
     /* ─── Team & Operations Section ─── */
-    .exec-grid {
+    .team-layout-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+      align-items: start;
+    }
+
+    .team-column {
+      display: flex;
+      flex-direction: column;
       gap: 1.2rem;
-      margin-bottom: 2rem;
     }
 
     .exec-card {
@@ -1457,12 +1464,6 @@
     }
 
     /* Divisions Grid */
-    .divisions-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.2rem;
-      margin-bottom: 2.5rem;
-    }
 
     .division-card {
       border: 1px solid rgba(232, 223, 206, 0.08);
@@ -2056,14 +2057,9 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
-      .exec-grid {
+      .team-layout-grid {
         grid-template-columns: 1fr;
-        gap: 1rem;
-      }
-
-      .divisions-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+        gap: 1.5rem;
       }
 
       .operations-grid {
@@ -2672,101 +2668,106 @@
         <p>A multi-disciplinary organization combining hardware design, embedded firmware, and modern software engineering. We operate our own prototyping lab, ensuring hardware is assembled under strict quality controls.</p>
       </div>
 
-      <!-- Executive Leadership -->
-      <div class="exec-grid reveal delay-1">
-        <div class="exec-card">
-          <div class="exec-badge">CEO</div>
-          <h3>Mithunkumar J</h3>
-          <p class="exec-title">Operations & Client Relations</p>
-          <p class="exec-desc">Directs operations, project management, client relations, and AI automation integration across product lines.</p>
-        </div>
-        <div class="exec-card">
-          <div class="exec-badge">CTO</div>
-          <h3>Haripriyan R</h3>
-          <p class="exec-title">Technology & Strategy</p>
-          <p class="exec-desc">Leads technology strategy, firmware architecture, RTL/VLSI engineering direction, and R&D platforms.</p>
-        </div>
-        <div class="exec-card">
-          <div class="exec-badge">CFO</div>
-          <h3>Tharun</h3>
-          <p class="exec-title">Finance & Procurement</p>
-          <p class="exec-desc">Oversees financial strategy, global component procurement, AI resource planning, and project scaling.</p>
-        </div>
-      </div>
-
-      <!-- Engineering Divisions -->
-      <div class="divisions-grid reveal delay-2">
-        <!-- Division 1: Hardware Design -->
-        <div class="division-card">
-          <div class="div-header">
-            <h4>Engineering Design</h4>
-            <span class="div-lead">Lead: Ayden Joshua M</span>
-            <span class="div-lead-title">Lead Hardware Architect</span>
+      <!-- Executive & Engineering Alignment -->
+      <div class="team-layout-grid reveal delay-1">
+        <!-- CEO + Embedded & Product Engineering -->
+        <div class="team-column">
+          <div class="exec-card">
+            <div class="exec-badge">CEO</div>
+            <h3>Mithunkumar J</h3>
+            <p class="exec-title">Operations & Client Relations</p>
+            <p class="exec-desc">Directs operations, project management, client relations, and AI automation integration across product lines.</p>
           </div>
-          <div class="div-body">
-            <div class="team-members">
-              <h5>Engineering Team</h5>
-              <ul>
-                <li><strong>Sudharsan G S</strong> <span>Senior Hardware Engineer</span></li>
-                <li><strong>Arvindh Arjun S</strong> <span>RTL & PCB Design Engineer</span></li>
-                <li><strong>Akhil S B</strong> <span>Digital Design Engineer</span></li>
-              </ul>
+
+          <div class="division-card">
+            <div class="div-header">
+              <h4>Embedded & Product</h4>
+              <span class="div-lead">Lead: Abhisek KR</span>
+              <span class="div-lead-title">Lead Product Engineer</span>
             </div>
-            <div class="div-focus">
-              <h5>Division Focus</h5>
-              <div class="focus-tags">
-                <span>VLSI</span><span>RTL Design</span><span>FPGA</span><span>CAD & Sim</span><span>Circuits</span><span>Semiconductors</span>
+            <div class="div-body">
+              <div class="team-members">
+                <h5>Engineering Team</h5>
+                <ul>
+                  <li><strong>Chaarukesh R R</strong> <span>Embedded & AI Engineer</span></li>
+                  <li><strong>Haresh S</strong> <span>Firmware & PCB Engineer</span></li>
+                  <li><strong>Sai Deepak K</strong> <span>Embedded Product Engineer</span></li>
+                  <li><strong>T Harish</strong> <span>Validation & PCB Engineer</span></li>
+                  <li><strong>GK Venkatesan</strong> <span>AI Automation & Embedded</span></li>
+                </ul>
+              </div>
+              <div class="div-focus">
+                <h5>Division Focus</h5>
+                <div class="focus-tags">
+                  <span>Firmware</span><span>Embedded Systems</span><span>PCB Design</span><span>IoT</span><span>Bring-up</span><span>Validation</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Division 2: Embedded & Product -->
-        <div class="division-card">
-          <div class="div-header">
-            <h4>Embedded & Product</h4>
-            <span class="div-lead">Lead: Abhisek KR</span>
-            <span class="div-lead-title">Lead Product Engineer</span>
+        <!-- CTO + Engineering Design -->
+        <div class="team-column">
+          <div class="exec-card">
+            <div class="exec-badge">CTO</div>
+            <h3>Haripriyan R</h3>
+            <p class="exec-title">Technology & Strategy</p>
+            <p class="exec-desc">Leads technology strategy, firmware architecture, RTL/VLSI engineering direction, and R&D platforms.</p>
           </div>
-          <div class="div-body">
-            <div class="team-members">
-              <h5>Engineering Team</h5>
-              <ul>
-                <li><strong>Chaarukesh R R</strong> <span>Embedded & AI Engineer</span></li>
-                <li><strong>Haresh S</strong> <span>Firmware & PCB Engineer</span></li>
-                <li><strong>Sai Deepak K</strong> <span>Embedded Product Engineer</span></li>
-                <li><strong>T Harish</strong> <span>Validation & PCB Engineer</span></li>
-                <li><strong>GK Venkatesan</strong> <span>AI Automation & Embedded</span></li>
-              </ul>
+
+          <div class="division-card">
+            <div class="div-header">
+              <h4>Engineering Design</h4>
+              <span class="div-lead">Lead: Ayden Joshua M</span>
+              <span class="div-lead-title">Lead Hardware Architect</span>
             </div>
-            <div class="div-focus">
-              <h5>Division Focus</h5>
-              <div class="focus-tags">
-                <span>Firmware</span><span>Embedded Systems</span><span>PCB Design</span><span>IoT</span><span>Bring-up</span><span>Validation</span>
+            <div class="div-body">
+              <div class="team-members">
+                <h5>Engineering Team</h5>
+                <ul>
+                  <li><strong>Sudharsan G S</strong> <span>Senior Hardware Engineer</span></li>
+                  <li><strong>Arvindh Arjun S</strong> <span>RTL & PCB Design Engineer</span></li>
+                  <li><strong>Akhil S B</strong> <span>Digital Design Engineer</span></li>
+                </ul>
+              </div>
+              <div class="div-focus">
+                <h5>Division Focus</h5>
+                <div class="focus-tags">
+                  <span>VLSI</span><span>RTL Design</span><span>FPGA</span><span>CAD & Sim</span><span>Circuits</span><span>Semiconductors</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Division 3: Software Engineering -->
-        <div class="division-card">
-          <div class="div-header">
-            <h4>Software Engineering</h4>
-            <span class="div-lead">Lead: Raghul Deepan</span>
-            <span class="div-lead-title">Lead Software Engineer</span>
+        <!-- CFO + Software Engineering -->
+        <div class="team-column">
+          <div class="exec-card">
+            <div class="exec-badge">CFO</div>
+            <h3>Tharun</h3>
+            <p class="exec-title">Finance & Procurement</p>
+            <p class="exec-desc">Oversees financial strategy, global component procurement, AI resource planning, and project scaling.</p>
           </div>
-          <div class="div-body">
-            <div class="team-members">
-              <h5>Engineering Team</h5>
-              <ul>
-                <li><strong>Haripriyan R</strong> <span>Software Engineer</span></li>
-                <li><strong>Samraj Joshua S</strong> <span>Full-Stack & AI Developer</span></li>
-              </ul>
+
+          <div class="division-card">
+            <div class="div-header">
+              <h4>Software Engineering</h4>
+              <span class="div-lead">Lead: Raghul Deepan</span>
+              <span class="div-lead-title">Lead Software Engineer</span>
             </div>
-            <div class="div-focus">
-              <h5>Division Focus</h5>
-              <div class="focus-tags">
-                <span>Full-Stack</span><span>Web Apps</span><span>Backend Systems</span><span>APIs</span><span>DevOps</span><span>AI Integration</span>
+            <div class="div-body">
+              <div class="team-members">
+                <h5>Engineering Team</h5>
+                <ul>
+                  <li><strong>Haripriyan R</strong> <span>Software Engineer</span></li>
+                  <li><strong>Samraj Joshua S</strong> <span>Full-Stack & AI Developer</span></li>
+                </ul>
+              </div>
+              <div class="div-focus">
+                <h5>Division Focus</h5>
+                <div class="focus-tags">
+                  <span>Full-Stack</span><span>Web Apps</span><span>Backend Systems</span><span>APIs</span><span>DevOps</span><span>AI Integration</span>
+                </div>
               </div>
             </div>
           </div>

@@ -14,6 +14,7 @@
   "description": "",
   "main": "vite.config.js",
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "detect-libc": "^2.1.2",
     "fdir": "^6.5.0",
     "lightningcss": "^1.32.0",

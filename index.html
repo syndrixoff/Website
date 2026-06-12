@@ -1256,6 +1256,126 @@
       line-height: 1.55;
     }
 
+    /* ─── Tech Stack ─── */
+    .tech-stack-section {
+      margin-top: 3.5rem;
+      border-top: 1px dashed rgba(232, 223, 206, 0.08);
+      padding-top: 3.5rem;
+    }
+
+    .tech-stack-head {
+      margin-bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .tech-stack-head .kicker {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--copper);
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .tech-stack-head h3 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.5rem;
+      margin: 0.2rem 0 0;
+      color: var(--ink-pure);
+      letter-spacing: -0.02em;
+    }
+
+    .tech-stack-head p {
+      margin: 0.2rem 0 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .tech-stack-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+
+    .tech-card {
+      border: 1px solid rgba(232, 223, 206, 0.08);
+      border-radius: 20px;
+      background: rgba(18, 16, 14, 0.35);
+      backdrop-filter: blur(12px) saturate(1.3);
+      padding: 1.4rem;
+      box-shadow:
+        0 8px 30px -8px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 0 rgba(232, 223, 206, 0.05);
+      transition: border-color 0.3s var(--ease), transform 0.3s var(--ease), background-color 0.3s var(--ease);
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .tech-card:hover {
+      border-color: var(--line-strong);
+      background: rgba(18, 16, 14, 0.5);
+      transform: translateY(-4px);
+    }
+
+    .tech-icon-wrapper {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(196, 134, 63, 0.1);
+      border: 1px solid rgba(196, 134, 63, 0.15);
+      color: var(--copper);
+      transition: background-color 0.3s var(--ease), border-color 0.3s var(--ease);
+    }
+
+    .tech-card:hover .tech-icon-wrapper {
+      background: rgba(196, 134, 63, 0.18);
+      border-color: rgba(196, 134, 63, 0.3);
+    }
+
+    /* Alternate color coding */
+    .tech-card:nth-child(2) .tech-icon-wrapper,
+    .tech-card:nth-child(4) .tech-icon-wrapper {
+      background: rgba(94, 197, 189, 0.1);
+      border-color: rgba(94, 197, 189, 0.15);
+      color: var(--cyan);
+    }
+
+    .tech-card:nth-child(2):hover .tech-icon-wrapper,
+    .tech-card:nth-child(4):hover .tech-icon-wrapper {
+      background: rgba(94, 197, 189, 0.18);
+      border-color: rgba(94, 197, 189, 0.3);
+    }
+
+    .tech-card h4 {
+      margin: 0;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .tech-card .tech-title {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin: 0;
+      color: var(--ink-pure);
+    }
+
+    .tech-card .tech-list {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
     /* ─── CTA/Contact ─── */
     .cta-panel {
       position: relative;
@@ -1640,6 +1760,10 @@
       .workbench {
         grid-template-columns: 1fr;
       }
+
+      .tech-stack-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
     }
 
     /* ─── Hero Collapse to Single Column (under 880px) ─── */
@@ -1762,6 +1886,10 @@
         flex-wrap: wrap;
         justify-content: center;
       }
+
+      .tech-stack-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 420px) {
@@ -1795,6 +1923,21 @@
       }
     }
   </style>
+  <!-- Vercel Analytics & Speed Insights -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+    
+    // Dynamically inject Vercel tracking scripts to prevent Vite build-time warnings
+    const injectVercelScript = (src) => {
+      const s = document.createElement('script');
+      s.src = src;
+      s.defer = true;
+      document.head.appendChild(s);
+    };
+    injectVercelScript('/_vercel/insights/script.js');
+    injectVercelScript('/_vercel/speed-insights/script.js');
+  </script>
 </head>
 
 <body>
@@ -2149,6 +2292,65 @@
                 seamless transition from lab to factory.</p>
             </div>
           </article>
+        </div>
+      </div>
+
+      <!-- Tech Stack sub-section -->
+      <div class="tech-stack-section reveal">
+        <div class="tech-stack-head">
+          <p class="kicker">Core Technologies</p>
+          <h3>The Actual Tech Stack</h3>
+          <p>Specific tools, architectures, and protocols we employ to build reliable, high-performance hardware.</p>
+        </div>
+        <div class="tech-stack-grid">
+          <div class="tech-card">
+            <div class="tech-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24">
+                <rect x="3" y="3" width="18" height="18" rx="3" />
+                <path d="M3 9h18M9 21V9M15 9v12M3 15h18" />
+              </svg>
+            </div>
+            <h4>ECAD</h4>
+            <p class="tech-title">KiCad</p>
+            <p class="tech-list">Professional multi-layer schematic design, precise PCB routing, and fabrication package generation.</p>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24">
+                <path d="m8 8-4 4 4 4M16 8l4 4-4 4M10 19l4-14" />
+              </svg>
+            </div>
+            <h4>Firmware</h4>
+            <p class="tech-title">C / C++</p>
+            <p class="tech-list">Low-level, hardware-optimized firmware development for high reliability and real-time execution.</p>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24">
+                <rect x="5" y="5" width="14" height="14" rx="2" />
+                <path d="M9 9h6v6H9z" />
+                <path d="M9 1v4M15 1v4M9 19v4M15 19v4M1 9h4M1 15h4M19 9h4M19 15h4" />
+              </svg>
+            </div>
+            <h4>MCUs & Architectures</h4>
+            <p class="tech-title">ARM / STM32</p>
+            <p class="tech-list">ARM Cortex-M core processing, STM32 microcontrollers, ESP32, and Nordic Semiconductor systems.</p>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24">
+                <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z" />
+                <path d="M12 12a3 3 0 1 0 3 3 3 3 0 0 0-3-3z" />
+                <path d="M17 7a7 7 0 1 0 0 10" />
+              </svg>
+            </div>
+            <h4>IoT & Connectivity</h4>
+            <p class="tech-title">MQTT / BLE</p>
+            <p class="tech-list">Wireless and remote connectivity via Bluetooth Low Energy (BLE), Cellular (LTE-M/NB-IoT), and MQTT protocol.</p>
+          </div>
         </div>
       </div>
     </section>

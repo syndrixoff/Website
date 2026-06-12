@@ -1376,6 +1376,297 @@
       line-height: 1.5;
     }
 
+    /* ─── Team & Operations Section ─── */
+    .exec-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .exec-card {
+      position: relative;
+      border: 1px solid rgba(232, 223, 206, 0.08);
+      border-radius: var(--radius-sm);
+      background: rgba(18, 16, 14, 0.35);
+      backdrop-filter: blur(16px) saturate(1.3);
+      padding: 1.6rem;
+      box-shadow:
+        0 12px 40px -10px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 0 rgba(232, 223, 206, 0.05);
+      transition: border-color 0.3s var(--ease), transform 0.3s var(--ease);
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .exec-card:hover {
+      border-color: var(--line-strong);
+      transform: translateY(-4px);
+    }
+
+    .exec-badge {
+      align-self: start;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #0c0b09;
+      background: var(--copper);
+      padding: 0.2rem 0.5rem;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.4rem;
+    }
+
+    .exec-card:nth-child(2) .exec-badge {
+      background: var(--cyan);
+    }
+
+    .exec-card:nth-child(3) .exec-badge {
+      background: var(--green);
+    }
+
+    .exec-card h3 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.35rem;
+      color: var(--ink-pure);
+      margin: 0;
+    }
+
+    .exec-title {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--copper);
+      margin: 0;
+    }
+
+    .exec-card:nth-child(2) .exec-title {
+      color: var(--cyan);
+    }
+
+    .exec-card:nth-child(3) .exec-title {
+      color: var(--green);
+    }
+
+    .exec-desc {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin: 0.4rem 0 0;
+      line-height: 1.5;
+    }
+
+    /* Divisions Grid */
+    .divisions-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .division-card {
+      border: 1px solid rgba(232, 223, 206, 0.08);
+      border-radius: var(--radius-sm);
+      background: rgba(18, 16, 14, 0.35);
+      backdrop-filter: blur(16px) saturate(1.3);
+      padding: 1.6rem;
+      box-shadow:
+        0 12px 40px -10px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 0 rgba(232, 223, 206, 0.05);
+      transition: border-color 0.3s var(--ease), transform 0.3s var(--ease);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .division-card:hover {
+      border-color: var(--line-strong);
+      transform: translateY(-4px);
+    }
+
+    .div-header {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .div-header h4 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.25rem;
+      color: var(--ink-pure);
+      margin: 0;
+    }
+
+    .div-lead {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--copper);
+    }
+
+    .division-card:nth-child(2) .div-lead {
+      color: var(--cyan);
+    }
+
+    .division-card:nth-child(3) .div-lead {
+      color: var(--green);
+    }
+
+    .div-lead-title {
+      font-size: 0.78rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .div-body {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .team-members h5,
+    .div-focus h5 {
+      margin: 0 0 0.5rem;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      font-weight: 600;
+      border-bottom: 1px solid rgba(232, 223, 206, 0.06);
+      padding-bottom: 0.3rem;
+    }
+
+    .team-members ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .team-members li {
+      font-size: 0.85rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .team-members li strong {
+      color: var(--ink-pure);
+      font-weight: 600;
+    }
+
+    .team-members li span {
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-align: right;
+    }
+
+    .focus-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .focus-tags span {
+      font-size: 0.7rem;
+      color: var(--ink-pure);
+      background: rgba(232, 223, 206, 0.05);
+      border: 1px solid rgba(232, 223, 206, 0.08);
+      padding: 0.15rem 0.45rem;
+      border-radius: 6px;
+    }
+
+    /* Operations and IP Grid */
+    .operations-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+    }
+
+    .ops-card {
+      border: 1px solid rgba(232, 223, 206, 0.08);
+      border-radius: var(--radius);
+      background: rgba(18, 16, 14, 0.4);
+      backdrop-filter: blur(20px) saturate(1.3);
+      padding: 2rem;
+      box-shadow:
+        0 16px 48px -12px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 0 rgba(232, 223, 206, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      transition: border-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
+    }
+
+    .ops-card:hover {
+      border-color: rgba(232, 223, 206, 0.15);
+      box-shadow:
+        0 20px 60px -10px rgba(0, 0, 0, 0.6),
+        inset 0 1px 0 0 rgba(232, 223, 206, 0.12);
+    }
+
+    .ops-card.ip-highlight {
+      border-color: rgba(196, 134, 63, 0.25);
+      background:
+        radial-gradient(ellipse at 80% 20%, rgba(196, 134, 63, 0.08), transparent 18rem),
+        rgba(18, 16, 14, 0.45);
+    }
+
+    .ops-card.ip-highlight:hover {
+      border-color: var(--copper);
+    }
+
+    .ops-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(94, 197, 189, 0.1);
+      border: 1px solid rgba(94, 197, 189, 0.15);
+      color: var(--cyan);
+      margin-bottom: 0.4rem;
+    }
+
+    .ops-card.ip-highlight .ops-icon {
+      background: rgba(196, 134, 63, 0.1);
+      border: 1px solid rgba(196, 134, 63, 0.15);
+      color: var(--copper);
+    }
+
+    .ops-icon svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .ops-card h3 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.45rem;
+      margin: 0;
+      color: var(--ink-pure);
+    }
+
+    .ops-location {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--cyan);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin: -0.4rem 0 0;
+    }
+
+    .ops-text {
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin: 0;
+    }
+
     /* ─── CTA/Contact ─── */
     .cta-panel {
       position: relative;
@@ -1764,6 +2055,21 @@
       .tech-stack-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
+
+      .exec-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .divisions-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .operations-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
     }
 
     /* ─── Hero Collapse to Single Column (under 880px) ─── */
@@ -1957,6 +2263,7 @@
       <a href="#services" role="listitem">Services</a>
       <a href="#process" role="listitem">Process</a>
       <a href="#workbench" role="listitem">Workbench</a>
+      <a href="#team" role="listitem">Team</a>
     </div>
     <a class="nav-cta" href="#contact">Start a Project</a>
   </nav>
@@ -2355,6 +2662,145 @@
       </div>
     </section>
 
+    <!-- ─── Team & Operations ─── -->
+    <section class="section" id="team" aria-labelledby="team-title">
+      <div class="section-head reveal">
+        <div>
+          <p class="kicker">The Human Element & Operations</p>
+          <h2 id="team-title">Engineered by specialists. Owned by you.</h2>
+        </div>
+        <p>A multi-disciplinary organization combining hardware design, embedded firmware, and modern software engineering. We operate our own prototyping lab, ensuring hardware is assembled under strict quality controls.</p>
+      </div>
+
+      <!-- Executive Leadership -->
+      <div class="exec-grid reveal delay-1">
+        <div class="exec-card">
+          <div class="exec-badge">CEO</div>
+          <h3>Mithunkumar J</h3>
+          <p class="exec-title">Operations & Client Relations</p>
+          <p class="exec-desc">Directs operations, project management, client relations, and AI automation integration across product lines.</p>
+        </div>
+        <div class="exec-card">
+          <div class="exec-badge">CTO</div>
+          <h3>Haripriyan R</h3>
+          <p class="exec-title">Technology & Strategy</p>
+          <p class="exec-desc">Leads technology strategy, firmware architecture, RTL/VLSI engineering direction, and R&D platforms.</p>
+        </div>
+        <div class="exec-card">
+          <div class="exec-badge">CFO</div>
+          <h3>Tharun</h3>
+          <p class="exec-title">Finance & Procurement</p>
+          <p class="exec-desc">Oversees financial strategy, global component procurement, AI resource planning, and project scaling.</p>
+        </div>
+      </div>
+
+      <!-- Engineering Divisions -->
+      <div class="divisions-grid reveal delay-2">
+        <!-- Division 1: Hardware Design -->
+        <div class="division-card">
+          <div class="div-header">
+            <h4>Engineering Design</h4>
+            <span class="div-lead">Lead: Ayden Joshua M</span>
+            <span class="div-lead-title">Lead Hardware Architect</span>
+          </div>
+          <div class="div-body">
+            <div class="team-members">
+              <h5>Engineering Team</h5>
+              <ul>
+                <li><strong>Sudharsan G S</strong> <span>Senior Hardware Engineer</span></li>
+                <li><strong>Arvindh Arjun S</strong> <span>RTL & PCB Design Engineer</span></li>
+                <li><strong>Akhil S B</strong> <span>Digital Design Engineer</span></li>
+              </ul>
+            </div>
+            <div class="div-focus">
+              <h5>Division Focus</h5>
+              <div class="focus-tags">
+                <span>VLSI</span><span>RTL Design</span><span>FPGA</span><span>CAD & Sim</span><span>Circuits</span><span>Semiconductors</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Division 2: Embedded & Product -->
+        <div class="division-card">
+          <div class="div-header">
+            <h4>Embedded & Product</h4>
+            <span class="div-lead">Lead: Abhisek KR</span>
+            <span class="div-lead-title">Lead Product Engineer</span>
+          </div>
+          <div class="div-body">
+            <div class="team-members">
+              <h5>Engineering Team</h5>
+              <ul>
+                <li><strong>Chaarukesh R R</strong> <span>Embedded & AI Engineer</span></li>
+                <li><strong>Haresh S</strong> <span>Firmware & PCB Engineer</span></li>
+                <li><strong>Sai Deepak K</strong> <span>Embedded Product Engineer</span></li>
+                <li><strong>T Harish</strong> <span>Validation & PCB Engineer</span></li>
+                <li><strong>GK Venkatesan</strong> <span>AI Automation & Embedded</span></li>
+              </ul>
+            </div>
+            <div class="div-focus">
+              <h5>Division Focus</h5>
+              <div class="focus-tags">
+                <span>Firmware</span><span>Embedded Systems</span><span>PCB Design</span><span>IoT</span><span>Bring-up</span><span>Validation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Division 3: Software Engineering -->
+        <div class="division-card">
+          <div class="div-header">
+            <h4>Software Engineering</h4>
+            <span class="div-lead">Lead: Raghul Deepan</span>
+            <span class="div-lead-title">Lead Software Engineer</span>
+          </div>
+          <div class="div-body">
+            <div class="team-members">
+              <h5>Engineering Team</h5>
+              <ul>
+                <li><strong>Haripriyan R</strong> <span>Software Engineer</span></li>
+                <li><strong>Samraj Joshua S</strong> <span>Full-Stack & AI Developer</span></li>
+              </ul>
+            </div>
+            <div class="div-focus">
+              <h5>Division Focus</h5>
+              <div class="focus-tags">
+                <span>Full-Stack</span><span>Web Apps</span><span>Backend Systems</span><span>APIs</span><span>DevOps</span><span>AI Integration</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lab Operations & IP Policy -->
+      <div class="operations-grid reveal delay-3">
+        <!-- Lab details -->
+        <div class="ops-card">
+          <div class="ops-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M19 10h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2M12 2v16M8 6l4-4 4 4" />
+            </svg>
+          </div>
+          <h3>In-House Prototyping Lab</h3>
+          <p class="ops-location">Based in India</p>
+          <p class="ops-text">Our physical prototypes are assembled, debugged, and validated directly inside our dedicated in-house hardware laboratory. Equipped with high-precision testing gear, logic analyzers, and reflow stations, we maintain total quality control over PCB bring-up before shipping globally to your door.</p>
+        </div>
+
+        <!-- IP Policy -->
+        <div class="ops-card ip-highlight">
+          <div class="ops-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10zM9 11l2 2 4-4" />
+            </svg>
+          </div>
+          <h3>Client-First IP Policy</h3>
+          <p class="ops-location">100% IP Ownership Guarantee</p>
+          <p class="ops-text">All intellectual property, including schematic designs, PCB layouts, RTL models, firmware source code, and software components developed during our partnership, belongs exclusively and unconditionally to you. We execute strict NDAs and transfer all rights upon milestone delivery.</p>
+        </div>
+      </div>
+    </section>
+
     <!-- ─── CTA / Contact ─── -->
     <section class="section" id="contact" aria-labelledby="contact-title">
       <div class="cta-panel reveal-scale">
@@ -2406,6 +2852,7 @@
       <a href="#services">Services</a>
       <a href="#process">Process</a>
       <a href="#workbench">Workbench</a>
+      <a href="#team">Team</a>
     </div>
 
   </footer>

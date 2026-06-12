@@ -215,13 +215,12 @@
       top: 16px;
       z-index: 60;
       transform: translateX(-50%);
-      width: min(1200px, calc(100% - 24px));
+      width: min(820px, calc(100% - 24px)); /* Reduced width to tighten elements */
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 1rem;
-      padding: 0.7rem 0.7rem 0.7rem 1.5rem;
-      /* Enlarged padding */
+      padding: 0.5rem 0.5rem 0.5rem 1.2rem; /* Scaled down padding */
       border: 1px solid rgba(232, 223, 206, 0.08);
       border-radius: 999px;
       /* Upgraded liquid glass styling: multi-layered gradient refraction */
@@ -272,8 +271,7 @@
       align-items: center;
       text-decoration: none;
       font-family: "Space Grotesk", sans-serif;
-      font-size: 1rem;
-      /* Enlarged brand font */
+      font-size: 0.85rem; /* Scaled down brand font */
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -285,7 +283,7 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 0.2rem;
+      gap: 0.15rem;
       position: relative;
       z-index: 2;
     }
@@ -293,13 +291,11 @@
     .nav-links a {
       color: var(--muted);
       text-decoration: none;
-      font-size: 0.85rem;
-      /* Enlarged links font */
+      font-size: 0.75rem; /* Scaled down links font */
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      padding: 0.68rem 1.05rem;
-      /* Enlarged link padding */
+      padding: 0.55rem 0.85rem; /* Scaled down link padding */
       border-radius: 999px;
       transition: color 0.3s ease;
       position: relative;
@@ -313,8 +309,7 @@
 
     .nav-indicator {
       position: absolute;
-      height: 76%;
-      /* Adjusted height */
+      height: 74%; /* Scaled down height */
       border-radius: 999px;
       /* Liquid glass drop styling with brand copper glow */
       background: linear-gradient(180deg, rgba(232, 223, 206, 0.14) 0%, rgba(232, 223, 206, 0.04) 100%);
@@ -328,8 +323,7 @@
       z-index: 1;
       opacity: 0;
       transform: scale(0.9);
-      top: 12%;
-      /* Adjusted alignment */
+      top: 13%; /* Adjusted alignment */
       /* Transition is updated dynamically in JS for the stretch effect */
     }
 
@@ -337,11 +331,9 @@
       background: var(--copper);
       color: #0c0b09;
       border-radius: 999px;
-      padding: 0.72rem 1.3rem;
-      /* Enlarged CTA padding */
+      padding: 0.55rem 1.1rem; /* Scaled down CTA padding */
       font-weight: 900;
-      font-size: 0.85rem;
-      /* Enlarged CTA font */
+      font-size: 0.75rem; /* Scaled down CTA font */
       letter-spacing: 0.02em;
       text-decoration: none;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -1607,7 +1599,7 @@
       .nav {
         top: 10px;
         border-radius: 20px;
-        padding: 0.7rem 0.8rem;
+        padding: 0.5rem 0.6rem;
       }
 
       .nav-links {
@@ -1615,8 +1607,8 @@
       }
 
       .nav-cta {
-        font-size: 0.8rem;
-        padding: 0.65rem 1.1rem;
+        font-size: 0.75rem;
+        padding: 0.55rem 1.1rem;
       }
 
       .section-head {
@@ -1691,17 +1683,17 @@
     @media (max-width: 640px) {
       .nav {
         width: calc(100% - 14px);
-        padding: 0.65rem 0.65rem 0.65rem 0.9rem;
+        padding: 0.5rem 0.5rem 0.5rem 0.8rem;
       }
 
       .brand {
-        font-size: 0.85rem;
+        font-size: 0.78rem;
         letter-spacing: 0.06em;
       }
 
       .nav-cta {
-        font-size: 0.72rem;
-        padding: 0.55rem 0.9rem;
+        font-size: 0.68rem;
+        padding: 0.45rem 0.8rem;
       }
 
       .hero {
@@ -1822,7 +1814,6 @@
       <a href="#services" role="listitem">Services</a>
       <a href="#process" role="listitem">Process</a>
       <a href="#workbench" role="listitem">Workbench</a>
-      <a href="#contact" role="listitem">Contact</a>
     </div>
     <a class="nav-cta" href="#contact">Start a Project</a>
   </nav>
@@ -2171,7 +2162,7 @@
           <h2 id="contact-title">Bring a concept. Leave with an engineering direction.</h2>
           <p>Tell SYNDRIX what you need engineered — custom electronics, embedded system, PCB design, IoT solution, or a
             complete product development package. The initial consultation is free so you can evaluate the fit before
-            committing.</p>
+            committing. Or reach us directly at <a href="mailto:syndrixoff@gmail.com" style="color: var(--copper); text-decoration: none; border-bottom: 1px dashed var(--copper);">syndrixoff@gmail.com</a></p>
           <form class="contact-form" id="contactForm">
             <label class="skip-link" for="nameInput">Name</label>
             <label class="skip-link" for="emailInput">Email Address</label>
@@ -2207,13 +2198,12 @@
   </div>
 
   <footer class="footer">
-    <span>SYNDRIX © 2026</span>
+    <span>SYNDRIX © 2026 | <a href="mailto:syndrixoff@gmail.com" style="color: var(--muted); text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='var(--copper)'" onmouseout="this.style.color='var(--muted)'">syndrixoff@gmail.com</a></span>
     <div class="footer-links">
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#process">Process</a>
       <a href="#workbench">Workbench</a>
-      <a href="#contact">Contact</a>
     </div>
 
   </footer>
@@ -2470,6 +2460,8 @@
     const links = document.querySelectorAll('.nav-links a');
     let activeLink = null;
     let isInitial = true;
+    let isClickScrolling = false;
+    let clickScrollTimeout = null;
 
     // Mouse glow follower coordinates
     if (navElement) {
@@ -2542,22 +2534,50 @@
         updateIndicator(link);
       });
       link.addEventListener('click', () => {
+        isClickScrolling = true;
         activeLink = link;
         links.forEach(l => l.classList.remove('active'));
         link.classList.add('active');
         updateIndicator(link);
+
+        clearTimeout(clickScrollTimeout);
+        clickScrollTimeout = setTimeout(() => {
+          isClickScrolling = false;
+        }, 850);
       });
     });
 
-    if (navLinks) {
-      navLinks.addEventListener('mouseleave', () => {
+    if (navElement) {
+      navElement.addEventListener('mouseleave', () => {
         updateIndicator(activeLink);
       });
     }
 
+    // Reset indicator on hovering brand or CTA
+    const brandElement = document.querySelector('.brand');
+    const ctaElement = document.querySelector('.nav-cta');
+    if (brandElement) {
+      brandElement.addEventListener('mouseenter', () => {
+        updateIndicator(activeLink);
+      });
+    }
+    if (ctaElement) {
+      ctaElement.addEventListener('mouseenter', () => {
+        updateIndicator(activeLink);
+      });
+    }
+
+    // Reset click scrolling flag when smooth scroll completes
+    window.addEventListener('scrollend', () => {
+      isClickScrolling = false;
+      clearTimeout(clickScrollTimeout);
+    });
+
     // Set active link based on current section viewport
     const sections = document.querySelectorAll('section[id]');
     const navObs = new IntersectionObserver((entries) => {
+      if (isClickScrolling) return; // Ignore scrollspy updates during smooth scroll clicks
+
       entries.forEach((e) => {
         if (e.isIntersecting) {
           const id = e.target.getAttribute('id');

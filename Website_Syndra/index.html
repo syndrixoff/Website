@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SYNDRIX — Engineered with Intelligence</title>
-  <meta name="description" content="SYNDRIX is an engineering-driven company specializing in custom electronic systems, embedded technologies, product development, PCB design, and intelligent hardware solutions.">
+  <meta name="description"
+    content="SYNDRIX is an engineering-driven company specializing in custom electronic systems, embedded technologies, product development, PCB design, and intelligent hardware solutions.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230c0b09'/%3E%3Cpath d='M14 42 32 12l18 30H14Z' fill='none' stroke='%23c4863f' stroke-width='4'/%3E%3Cpath d='M22 42h28L32 52 14 42h8Z' fill='%235ec5bd'/%3E%3C/svg%3E">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230c0b09'/%3E%3Cpath d='M14 42 32 12l18 30H14Z' fill='none' stroke='%23c4863f' stroke-width='4'/%3E%3Cpath d='M22 42h28L32 52 14 42h8Z' fill='%235ec5bd'/%3E%3C/svg%3E">
   <style>
     :root {
       --bg: #0c0b09;
@@ -32,8 +37,13 @@
       --ease-out: cubic-bezier(0, 0, 0.2, 1);
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -55,11 +65,13 @@
       pointer-events: none;
       overflow: hidden;
     }
+
     .glow-orb {
       position: absolute;
       border-radius: 50%;
       will-change: transform;
     }
+
     .glow-1 {
       top: -25%;
       right: -10%;
@@ -68,6 +80,7 @@
       background: radial-gradient(circle, rgba(94, 197, 189, 0.08) 0%, transparent 70%);
       animation: float-1 40s infinite alternate ease-in-out;
     }
+
     .glow-2 {
       top: 5%;
       left: -20%;
@@ -76,6 +89,7 @@
       background: radial-gradient(circle, rgba(196, 134, 63, 0.1) 0%, transparent 70%);
       animation: float-2 35s infinite alternate ease-in-out;
     }
+
     .glow-3 {
       bottom: -30%;
       left: 10%;
@@ -86,19 +100,45 @@
     }
 
     @keyframes float-1 {
-      0% { transform: translate(0, 0) scale(1); }
-      50% { transform: translate(-10%, 15%) scale(1.1); }
-      100% { transform: translate(5%, -5%) scale(0.9); }
+      0% {
+        transform: translate(0, 0) scale(1);
+      }
+
+      50% {
+        transform: translate(-10%, 15%) scale(1.1);
+      }
+
+      100% {
+        transform: translate(5%, -5%) scale(0.9);
+      }
     }
+
     @keyframes float-2 {
-      0% { transform: translate(0, 0) scale(1); }
-      50% { transform: translate(15%, -10%) scale(0.95); }
-      100% { transform: translate(-10%, 10%) scale(1.05); }
+      0% {
+        transform: translate(0, 0) scale(1);
+      }
+
+      50% {
+        transform: translate(15%, -10%) scale(0.95);
+      }
+
+      100% {
+        transform: translate(-10%, 10%) scale(1.05);
+      }
     }
+
     @keyframes float-3 {
-      0% { transform: translate(0, 0) scale(1); }
-      50% { transform: translate(-8%, -8%) scale(1.1); }
-      100% { transform: translate(12%, 5%) scale(0.9); }
+      0% {
+        transform: translate(0, 0) scale(1);
+      }
+
+      50% {
+        transform: translate(-8%, -8%) scale(1.1);
+      }
+
+      100% {
+        transform: translate(12%, 5%) scale(0.9);
+      }
     }
 
     body::before {
@@ -123,9 +163,20 @@
       background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="300" height="300"%3E%3Cfilter id="n"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.72" numOctaves="4" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23n)" opacity="1"/%3E%3C/svg%3E');
     }
 
-    ::selection { background: var(--copper); color: #0c0b09; }
-    a { color: inherit; }
-    button, input, textarea { font: inherit; }
+    ::selection {
+      background: var(--copper);
+      color: #0c0b09;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
 
     .skip-link {
       position: fixed;
@@ -142,7 +193,10 @@
       text-decoration: none;
       transition: transform 0.25s ease;
     }
-    .skip-link:focus { transform: translateY(0); }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
 
     .ambient-canvas {
       position: fixed;
@@ -166,43 +220,46 @@
       align-items: center;
       justify-content: space-between;
       gap: 1rem;
-      padding: 0.7rem 0.7rem 0.7rem 1.5rem; /* Enlarged padding */
+      padding: 0.7rem 0.7rem 0.7rem 1.5rem;
+      /* Enlarged padding */
       border: 1px solid rgba(232, 223, 206, 0.08);
       border-radius: 999px;
       /* Upgraded liquid glass styling: multi-layered gradient refraction */
       background: linear-gradient(135deg, rgba(232, 223, 206, 0.07), rgba(232, 223, 206, 0.02) 50%, rgba(12, 11, 9, 0.6));
       backdrop-filter: blur(28px) saturate(2.2);
       -webkit-backdrop-filter: blur(28px) saturate(2.2);
-      box-shadow: 
+      box-shadow:
         0 24px 60px -15px rgba(0, 0, 0, 0.75),
         inset 0 1px 0 0 rgba(232, 223, 206, 0.25),
         inset 0 -1px 0 0 rgba(0, 0, 0, 0.5),
         inset 0 0 16px rgba(232, 223, 206, 0.04);
       transition: all 0.4s var(--ease);
-      overflow: hidden; /* For mouse glow containment */
+      overflow: hidden;
+      /* For mouse glow containment */
     }
+
     /* Dynamic mouse glow refraction highlight */
     .nav::before {
       content: '';
       position: absolute;
       inset: 0;
       border-radius: inherit;
-      background: radial-gradient(
-        150px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-        rgba(232, 223, 206, 0.12),
-        transparent 80%
-      );
+      background: radial-gradient(150px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+          rgba(232, 223, 206, 0.12),
+          transparent 80%);
       opacity: 0;
       transition: opacity 0.4s ease;
       pointer-events: none;
       z-index: 0;
     }
+
     .nav:hover::before {
       opacity: 1;
     }
+
     .nav:hover {
       border-color: rgba(232, 223, 206, 0.16);
-      box-shadow: 
+      box-shadow:
         0 30px 70px -12px rgba(0, 0, 0, 0.8),
         inset 0 1px 0 0 rgba(232, 223, 206, 0.35),
         inset 0 -1px 0 0 rgba(0, 0, 0, 0.6),
@@ -215,7 +272,8 @@
       align-items: center;
       text-decoration: none;
       font-family: "Space Grotesk", sans-serif;
-      font-size: 1rem; /* Enlarged brand font */
+      font-size: 1rem;
+      /* Enlarged brand font */
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -231,32 +289,38 @@
       position: relative;
       z-index: 2;
     }
+
     .nav-links a {
       color: var(--muted);
       text-decoration: none;
-      font-size: 0.85rem; /* Enlarged links font */
+      font-size: 0.85rem;
+      /* Enlarged links font */
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      padding: 0.68rem 1.05rem; /* Enlarged link padding */
+      padding: 0.68rem 1.05rem;
+      /* Enlarged link padding */
       border-radius: 999px;
       transition: color 0.3s ease;
       position: relative;
       z-index: 2;
     }
+
     .nav-links a:hover,
     .nav-links a.active {
       color: var(--ink);
     }
+
     .nav-indicator {
       position: absolute;
-      height: 76%; /* Adjusted height */
+      height: 76%;
+      /* Adjusted height */
       border-radius: 999px;
       /* Liquid glass drop styling with brand copper glow */
       background: linear-gradient(180deg, rgba(232, 223, 206, 0.14) 0%, rgba(232, 223, 206, 0.04) 100%);
       border: 1px solid rgba(232, 223, 206, 0.22);
-      box-shadow: 
-        0 8px 24px -6px rgba(0, 0, 0, 0.5), 
+      box-shadow:
+        0 8px 24px -6px rgba(0, 0, 0, 0.5),
         inset 0 1px 2px rgba(255, 255, 255, 0.25),
         inset 0 -1px 2px rgba(0, 0, 0, 0.35),
         0 0 16px rgba(196, 134, 63, 0.12);
@@ -264,7 +328,8 @@
       z-index: 1;
       opacity: 0;
       transform: scale(0.9);
-      top: 12%; /* Adjusted alignment */
+      top: 12%;
+      /* Adjusted alignment */
       /* Transition is updated dynamically in JS for the stretch effect */
     }
 
@@ -272,9 +337,11 @@
       background: var(--copper);
       color: #0c0b09;
       border-radius: 999px;
-      padding: 0.72rem 1.3rem; /* Enlarged CTA padding */
+      padding: 0.72rem 1.3rem;
+      /* Enlarged CTA padding */
       font-weight: 900;
-      font-size: 0.85rem; /* Enlarged CTA font */
+      font-size: 0.85rem;
+      /* Enlarged CTA font */
       letter-spacing: 0.02em;
       text-decoration: none;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -282,10 +349,17 @@
       position: relative;
       z-index: 2;
     }
-    .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(196, 134, 63, 0.22); }
+
+    .nav-cta:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 24px rgba(196, 134, 63, 0.22);
+    }
 
     /* ─── Main ─── */
-    main { position: relative; z-index: 1; }
+    main {
+      position: relative;
+      z-index: 1;
+    }
 
     .section {
       width: min(1240px, calc(100% - 2.4rem));
@@ -301,6 +375,7 @@
       align-items: end;
       margin-bottom: 3rem;
     }
+
     .section-head p {
       margin: 0;
       color: var(--muted);
@@ -362,6 +437,7 @@
       letter-spacing: 0.14em;
       text-transform: uppercase;
     }
+
     .eyebrow::before {
       content: "";
       width: 32px;
@@ -379,9 +455,11 @@
       text-transform: uppercase;
       max-width: 900px;
     }
+
     h1 .line-1 {
       display: block;
     }
+
     h1 .line-2,
     h1 .line-3 {
       display: block;
@@ -389,15 +467,18 @@
       font-size: 0.82em;
       padding-left: 0.04em;
     }
+
     .scramble-target {
       display: inline-block;
       transition: color 0.2s var(--ease);
       cursor: default;
       position: relative;
     }
+
     .scramble-target.state-syndrix {
       color: var(--ink);
     }
+
     .scramble-target::after {
       content: '|';
       margin-left: 0.04em;
@@ -406,12 +487,16 @@
       display: inline-block;
       vertical-align: baseline;
     }
+
     .scramble-target.typing::after {
       opacity: 1;
       animation: cursor-blink 0.8s step-end infinite;
     }
+
     @keyframes cursor-blink {
-      50% { opacity: 0; }
+      50% {
+        opacity: 0;
+      }
     }
 
     .hero-copy {
@@ -445,11 +530,30 @@
       transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
       font-size: 0.88rem;
     }
-    .btn-primary { background: var(--copper); color: #0c0b09; border-color: var(--copper); }
-    .btn-secondary { background: rgba(232, 223, 206, 0.04); color: var(--ink); }
-    .btn:hover { transform: translateY(-2px); }
-    .btn-primary:hover { box-shadow: 0 10px 28px rgba(196, 134, 63, 0.2); }
-    .btn-secondary:hover { border-color: var(--line-strong); background: rgba(196, 134, 63, 0.07); }
+
+    .btn-primary {
+      background: var(--copper);
+      color: #0c0b09;
+      border-color: var(--copper);
+    }
+
+    .btn-secondary {
+      background: rgba(232, 223, 206, 0.04);
+      color: var(--ink);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 10px 28px rgba(196, 134, 63, 0.2);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--line-strong);
+      background: rgba(196, 134, 63, 0.07);
+    }
 
     .hero-stats {
       display: grid;
@@ -462,10 +566,12 @@
       border-radius: var(--radius-sm);
       overflow: hidden;
     }
+
     .stat-cell {
       background: rgba(12, 11, 9, 0.8);
       padding: 1rem 1.1rem;
     }
+
     .stat-cell strong {
       display: block;
       color: var(--ink-pure);
@@ -474,6 +580,7 @@
       letter-spacing: -0.05em;
       line-height: 1;
     }
+
     .stat-cell span {
       display: block;
       margin-top: 0.3rem;
@@ -498,6 +605,7 @@
       height: 380px;
       cursor: pointer;
     }
+
     .node-ring::before {
       content: "";
       position: absolute;
@@ -506,6 +614,7 @@
       border: 1px solid rgba(196, 134, 63, 0.25);
       animation: pulse-ring 6s ease-in-out infinite;
     }
+
     .node-ring::after {
       content: "";
       position: absolute;
@@ -521,6 +630,7 @@
       border: 1px solid rgba(94, 197, 189, 0.1);
       animation: spin-slow 30s linear infinite;
     }
+
     .ring-orbit:nth-child(2) {
       border-color: rgba(196, 134, 63, 0.08);
       animation-duration: 40s;
@@ -539,10 +649,19 @@
       animation: planet-orbit 18s linear infinite;
       animation-play-state: paused;
     }
+
     /* Negative delay offsets starting position on the orbit (120° = 1/3 of duration) */
-    .orbit-arm-1 { animation-delay: 0s; }
-    .orbit-arm-2 { animation-delay: -6s; }
-    .orbit-arm-3 { animation-delay: -12s; }
+    .orbit-arm-1 {
+      animation-delay: 0s;
+    }
+
+    .orbit-arm-2 {
+      animation-delay: -6s;
+    }
+
+    .orbit-arm-3 {
+      animation-delay: -12s;
+    }
 
     /* On hover/activation → start orbiting */
     .node-ring.orbiting .orbit-arm {
@@ -560,8 +679,8 @@
       display: grid;
       place-items: center;
       text-align: center;
-      box-shadow: 
-        0 12px 40px rgba(0, 0, 0, 0.45), 
+      box-shadow:
+        0 12px 40px rgba(0, 0, 0, 0.45),
         inset 0 0 20px rgba(196, 134, 63, 0.05),
         inset 0 1px 0 0 rgba(232, 223, 206, 0.15);
       transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
@@ -570,12 +689,13 @@
       left: -56px;
       transform: translateY(-134px);
     }
+
     .node:hover {
       border-color: var(--copper);
       background: rgba(18, 16, 14, 0.75);
-      box-shadow: 
-        0 16px 40px rgba(0, 0, 0, 0.5), 
-        inset 0 0 20px rgba(196, 134, 63, 0.1), 
+      box-shadow:
+        0 16px 40px rgba(0, 0, 0, 0.5),
+        inset 0 0 20px rgba(196, 134, 63, 0.1),
         0 0 24px rgba(196, 134, 63, 0.25),
         inset 0 1px 0 0 rgba(232, 223, 206, 0.25);
     }
@@ -586,16 +706,19 @@
       animation-play-state: paused;
       animation-delay: 0s;
     }
+
     .orbit-arm-2 .label {
       animation: counter-orbit 18s linear infinite;
       animation-play-state: paused;
       animation-delay: -6s;
     }
+
     .orbit-arm-3 .label {
       animation: counter-orbit 18s linear infinite;
       animation-play-state: paused;
       animation-delay: -12s;
     }
+
     .node-ring.orbiting .orbit-arm .label {
       animation-play-state: running;
     }
@@ -609,15 +732,24 @@
       color: var(--muted);
       display: block;
     }
+
     .node .label strong {
       display: block;
       color: var(--ink-pure);
       font-size: 0.72rem;
     }
 
-    .node-1 .label strong { color: var(--copper); }
-    .node-2 .label strong { color: var(--cyan); }
-    .node-3 .label strong { color: var(--ink-pure); }
+    .node-1 .label strong {
+      color: var(--copper);
+    }
+
+    .node-2 .label strong {
+      color: var(--cyan);
+    }
+
+    .node-3 .label strong {
+      color: var(--ink-pure);
+    }
 
     .connector {
       position: absolute;
@@ -636,6 +768,7 @@
       filter: blur(50px);
       pointer-events: none;
     }
+
     .glow-blob-1 {
       width: 280px;
       height: 280px;
@@ -643,6 +776,7 @@
       top: 0;
       right: -60px;
     }
+
     .glow-blob-2 {
       width: 200px;
       height: 200px;
@@ -658,6 +792,7 @@
       gap: 1rem;
       margin-bottom: 3rem;
     }
+
     .mission-card {
       border: 1px solid rgba(232, 223, 206, 0.1);
       border-radius: var(--radius);
@@ -666,25 +801,28 @@
       padding: 2rem 1.8rem;
       position: relative;
       overflow: hidden;
-      box-shadow: 
+      box-shadow:
         0 12px 36px -8px rgba(0, 0, 0, 0.4),
         inset 0 1px 0 0 rgba(232, 223, 206, 0.08);
       transition: border-color 0.3s ease, transform 0.3s var(--ease), background-color 0.3s ease, box-shadow 0.3s ease;
     }
+
     .mission-card:hover {
       border-color: var(--line-strong);
       transform: translateY(-3px);
       background: rgba(18, 16, 14, 0.55);
-      box-shadow: 
+      box-shadow:
         0 18px 48px -8px rgba(0, 0, 0, 0.5),
         inset 0 1px 0 0 rgba(232, 223, 206, 0.15);
     }
+
     .mission-card h3 {
       margin: 0 0 0.8rem;
       font-family: "Space Grotesk", sans-serif;
       font-size: 1.35rem;
       letter-spacing: -0.03em;
     }
+
     .mission-card p {
       margin: 0;
       color: var(--muted);
@@ -698,6 +836,7 @@
       grid-template-columns: repeat(5, minmax(0, 1fr));
       gap: 1rem;
     }
+
     .value-card {
       border: 1px solid rgba(232, 223, 206, 0.09);
       border-radius: var(--radius-sm);
@@ -705,19 +844,21 @@
       backdrop-filter: blur(12px) saturate(1.3);
       padding: 1.4rem 1.2rem;
       text-align: center;
-      box-shadow: 
+      box-shadow:
         0 8px 28px -6px rgba(0, 0, 0, 0.3),
         inset 0 1px 0 0 rgba(232, 223, 206, 0.06);
       transition: border-color 0.3s ease, transform 0.3s var(--ease), background-color 0.3s ease, box-shadow 0.3s ease;
     }
+
     .value-card:hover {
       border-color: var(--line-strong);
       transform: translateY(-3px);
       background: rgba(18, 16, 14, 0.5);
-      box-shadow: 
+      box-shadow:
         0 14px 36px -6px rgba(0, 0, 0, 0.4),
         inset 0 1px 0 0 rgba(232, 223, 206, 0.12);
     }
+
     .value-icon {
       width: 44px;
       height: 44px;
@@ -728,7 +869,12 @@
       background: linear-gradient(135deg, rgba(196, 134, 63, 0.15), rgba(94, 197, 189, 0.08));
       border: 1px solid var(--line);
     }
-    .value-icon svg { width: 22px; height: 22px; }
+
+    .value-icon svg {
+      width: 22px;
+      height: 22px;
+    }
+
     .value-card h4 {
       margin: 0 0 0.5rem;
       font-family: "Space Grotesk", sans-serif;
@@ -736,6 +882,7 @@
       color: var(--ink-pure);
       letter-spacing: -0.02em;
     }
+
     .value-card p {
       margin: 0;
       color: var(--muted);
@@ -757,10 +904,11 @@
       text-align: center;
       position: relative;
       overflow: hidden;
-      box-shadow: 
+      box-shadow:
         0 16px 40px -12px rgba(0, 0, 0, 0.5),
         inset 0 1px 0 0 rgba(232, 223, 206, 0.1);
     }
+
     .promise-banner .bg-grid {
       position: absolute;
       inset: 0;
@@ -771,6 +919,7 @@
       pointer-events: none;
       opacity: 0.5;
     }
+
     .promise-banner blockquote {
       margin: 0;
       position: relative;
@@ -784,6 +933,7 @@
       max-width: 700px;
       margin-inline: auto;
     }
+
     .promise-banner .promise-label {
       margin: 0.8rem 0 0;
       position: relative;
@@ -811,20 +961,22 @@
       border-radius: var(--radius);
       background: rgba(18, 16, 14, 0.45);
       backdrop-filter: blur(16px) saturate(1.4);
-      box-shadow: 
+      box-shadow:
         0 14px 40px -10px rgba(0, 0, 0, 0.4),
         inset 0 1px 0 0 rgba(232, 223, 206, 0.08);
       overflow: hidden;
       transition: border-color 0.3s ease, transform 0.3s var(--ease), background-color 0.3s ease, box-shadow 0.3s ease;
     }
+
     .service-card:hover {
       border-color: var(--line-strong);
       transform: translateY(-3px);
       background: rgba(18, 16, 14, 0.55);
-      box-shadow: 
+      box-shadow:
         0 20px 48px -10px rgba(0, 0, 0, 0.5),
         inset 0 1px 0 0 rgba(232, 223, 206, 0.15);
     }
+
     .service-card .num {
       font-family: "Space Grotesk", sans-serif;
       font-size: 5rem;
@@ -837,6 +989,7 @@
       right: 0.6rem;
       pointer-events: none;
     }
+
     .service-card h3 {
       margin: 0 0 0.7rem;
       font-family: "Space Grotesk", sans-serif;
@@ -846,6 +999,7 @@
       position: relative;
       z-index: 2;
     }
+
     .service-card p {
       margin: 0;
       color: var(--muted);
@@ -863,6 +1017,7 @@
       position: relative;
       z-index: 2;
     }
+
     .tag {
       border: 1px solid rgba(232, 223, 206, 0.08);
       border-radius: 999px;
@@ -886,15 +1041,37 @@
       pointer-events: none;
     }
 
-    .service-card-1 { --accent: var(--copper); }
-    .service-card-2 { --accent: var(--cyan); }
-    .service-card-3 { --accent: var(--ink-pure); }
-    .service-card-4 { --accent: var(--green); }
+    .service-card-1 {
+      --accent: var(--copper);
+    }
 
-    .service-card-1 h3 { color: var(--copper); }
-    .service-card-2 h3 { color: var(--cyan); }
-    .service-card-3 h3 { color: var(--ink-pure); }
-    .service-card-4 h3 { color: var(--green); }
+    .service-card-2 {
+      --accent: var(--cyan);
+    }
+
+    .service-card-3 {
+      --accent: var(--ink-pure);
+    }
+
+    .service-card-4 {
+      --accent: var(--green);
+    }
+
+    .service-card-1 h3 {
+      color: var(--copper);
+    }
+
+    .service-card-2 h3 {
+      color: var(--cyan);
+    }
+
+    .service-card-3 h3 {
+      color: var(--ink-pure);
+    }
+
+    .service-card-4 h3 {
+      color: var(--green);
+    }
 
     /* ─── Process ─── */
     .process-track {
@@ -945,6 +1122,7 @@
       letter-spacing: -0.03em;
       line-height: 1.1;
     }
+
     .step-item p {
       margin: 0;
       color: var(--muted);
@@ -968,15 +1146,17 @@
       backdrop-filter: blur(20px) saturate(1.3);
       padding: 1.2rem;
       overflow: hidden;
-      box-shadow: 
+      box-shadow:
         0 16px 48px -12px rgba(0, 0, 0, 0.5),
         inset 0 1px 0 0 rgba(232, 223, 206, 0.08);
     }
+
     .terminal .win-dots {
       display: flex;
       gap: 0.3rem;
       margin-bottom: 0.8rem;
     }
+
     .terminal .win-dots i {
       width: 7px;
       height: 7px;
@@ -984,8 +1164,16 @@
       background: var(--copper);
       opacity: 0.6;
     }
-    .terminal .win-dots i:nth-child(2) { background: var(--cyan); opacity: 0.5; }
-    .terminal .win-dots i:nth-child(3) { background: var(--green); opacity: 0.4; }
+
+    .terminal .win-dots i:nth-child(2) {
+      background: var(--cyan);
+      opacity: 0.5;
+    }
+
+    .terminal .win-dots i:nth-child(3) {
+      background: var(--green);
+      opacity: 0.4;
+    }
 
     .terminal pre {
       margin: 0;
@@ -995,14 +1183,24 @@
       line-height: 1.8;
       white-space: pre-wrap;
     }
-    .terminal .c1 { color: var(--cyan); }
-    .terminal .c2 { color: var(--copper); }
-    .terminal .d { color: rgba(232, 223, 206, 0.25); }
+
+    .terminal .c1 {
+      color: var(--cyan);
+    }
+
+    .terminal .c2 {
+      color: var(--copper);
+    }
+
+    .terminal .d {
+      color: rgba(232, 223, 206, 0.25);
+    }
 
     .deliverables {
       display: grid;
       gap: 0.9rem;
     }
+
     .deliverable {
       border: 1px solid rgba(232, 223, 206, 0.09);
       border-radius: 22px;
@@ -1013,18 +1211,20 @@
       grid-template-columns: auto 1fr;
       gap: 1rem;
       align-items: start;
-      box-shadow: 
+      box-shadow:
         0 8px 30px -8px rgba(0, 0, 0, 0.3),
         inset 0 1px 0 0 rgba(232, 223, 206, 0.06);
       transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
     }
+
     .deliverable:hover {
       border-color: var(--line-strong);
       background: rgba(18, 16, 14, 0.5);
-      box-shadow: 
+      box-shadow:
         0 14px 36px -8px rgba(0, 0, 0, 0.4),
         inset 0 1px 0 0 rgba(232, 223, 206, 0.12);
     }
+
     .deliverable .icon {
       width: 40px;
       height: 40px;
@@ -1038,11 +1238,31 @@
       font-size: 0.85rem;
       flex-shrink: 0;
     }
-    .deliverable:nth-child(2) .icon { background: var(--cyan); }
-    .deliverable:nth-child(3) .icon { background: var(--green); }
-    .deliverable:nth-child(4) .icon { background: var(--ink-pure); }
-    .deliverable h3 { margin: 0 0 0.3rem; font-family: "Space Grotesk", sans-serif; font-size: 1.15rem; }
-    .deliverable p { margin: 0; color: var(--muted); font-size: 0.9rem; line-height: 1.55; }
+
+    .deliverable:nth-child(2) .icon {
+      background: var(--cyan);
+    }
+
+    .deliverable:nth-child(3) .icon {
+      background: var(--green);
+    }
+
+    .deliverable:nth-child(4) .icon {
+      background: var(--ink-pure);
+    }
+
+    .deliverable h3 {
+      margin: 0 0 0.3rem;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.15rem;
+    }
+
+    .deliverable p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.55;
+    }
 
     /* ─── CTA/Contact ─── */
     .cta-panel {
@@ -1076,7 +1296,11 @@
       opacity: 0.5;
     }
 
-    .cta-panel h2 { margin-inline: auto; max-width: 700px; }
+    .cta-panel h2 {
+      margin-inline: auto;
+      max-width: 700px;
+    }
+
     .cta-panel p {
       margin: 1rem auto 0;
       color: var(--muted);
@@ -1099,6 +1323,7 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 0.75rem;
     }
+
     .submit-btn {
       width: 100%;
       min-height: 54px;
@@ -1119,6 +1344,7 @@
       transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
       box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
     }
+
     .contact-form input:focus {
       border-color: var(--copper);
       background: rgba(12, 11, 9, 0.6);
@@ -1153,22 +1379,28 @@
       letter-spacing: 0.06em;
       text-transform: uppercase;
     }
+
     .footer-links {
       display: flex;
       gap: 1.5rem;
     }
+
     .footer-links a {
       color: var(--muted);
       text-decoration: none;
       transition: color 0.2s ease;
     }
-    .footer-links a:hover { color: var(--ink); }
+
+    .footer-links a:hover {
+      color: var(--ink);
+    }
 
     /* ─── Closing Statement ─── */
     .closing-statement {
       text-align: center;
       padding: 3rem 0 0;
     }
+
     .closing-statement p {
       max-width: 680px;
       margin: 0 auto 0.8rem;
@@ -1176,6 +1408,7 @@
       font-size: 1rem;
       line-height: 1.7;
     }
+
     .closing-statement .tagline {
       font-family: "Space Grotesk", sans-serif;
       font-size: 1.15rem;
@@ -1190,6 +1423,7 @@
       transform: translateY(36px) scale(0.98);
       transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
     }
+
     .reveal.is-visible {
       opacity: 1;
       transform: translateY(0) scale(1);
@@ -1200,6 +1434,7 @@
       transform: translateX(-30px);
       transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
     }
+
     .reveal-l.is-visible {
       opacity: 1;
       transform: translateX(0);
@@ -1210,6 +1445,7 @@
       transform: translateX(30px);
       transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
     }
+
     .reveal-r.is-visible {
       opacity: 1;
       transform: translateX(0);
@@ -1220,16 +1456,31 @@
       transform: scale(0.92);
       transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
     }
+
     .reveal-scale.is-visible {
       opacity: 1;
       transform: scale(1);
     }
 
-    .delay-1 { transition-delay: 0.06s; }
-    .delay-2 { transition-delay: 0.14s; }
-    .delay-3 { transition-delay: 0.22s; }
-    .delay-4 { transition-delay: 0.3s; }
-    .delay-5 { transition-delay: 0.38s; }
+    .delay-1 {
+      transition-delay: 0.06s;
+    }
+
+    .delay-2 {
+      transition-delay: 0.14s;
+    }
+
+    .delay-3 {
+      transition-delay: 0.22s;
+    }
+
+    .delay-4 {
+      transition-delay: 0.3s;
+    }
+
+    .delay-5 {
+      transition-delay: 0.38s;
+    }
 
     /* ─── Toast ─── */
     #toast {
@@ -1245,39 +1496,77 @@
       backdrop-filter: blur(24px) saturate(1.4);
       color: var(--ink);
       padding: 0.9rem 1.4rem;
-      box-shadow: 
+      box-shadow:
         0 20px 48px rgba(0, 0, 0, 0.5),
         inset 0 1px 0 0 rgba(232, 223, 206, 0.15);
       transition: transform 0.4s var(--ease);
       font-size: 0.9rem;
     }
-    #toast.show { transform: translate(-50%, 0); }
+
+    #toast.show {
+      transform: translate(-50%, 0);
+    }
 
     /* ─── Keyframes ─── */
     @keyframes spin-slow {
-      to { transform: rotate(360deg); }
+      to {
+        transform: rotate(360deg);
+      }
     }
+
     @keyframes pulse-ring {
-      0%, 100% { transform: scale(1); opacity: 0.6; }
-      50% { transform: scale(1.04); opacity: 0.3; }
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 0.6;
+      }
+
+      50% {
+        transform: scale(1.04);
+        opacity: 0.3;
+      }
     }
+
     @keyframes planet-orbit {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
     }
+
     @keyframes counter-orbit {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(-360deg); }
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(-360deg);
+      }
     }
+
     /* ─── Reduced Motion ─── */
     @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
+
+      *,
+      *::before,
+      *::after {
         animation-duration: 0.001ms !important;
         animation-iteration-count: 1 !important;
         scroll-behavior: auto !important;
         transition-duration: 0.001ms !important;
       }
-      .reveal, .reveal-l, .reveal-r, .reveal-scale { opacity: 1; transform: none; }
+
+      .reveal,
+      .reveal-l,
+      .reveal-r,
+      .reveal-scale {
+        opacity: 1;
+        transform: none;
+      }
     }
 
     /* ─── Hero Responsive Scaling (1200px to 880px) ─── */
@@ -1286,13 +1575,16 @@
         grid-template-columns: 1.25fr 0.75fr;
         gap: 2rem;
       }
+
       h1 {
         font-size: clamp(3rem, 7vw, 6.5rem);
       }
+
       .node-ring {
         width: 320px;
         height: 320px;
       }
+
       .node {
         width: 96px;
         height: 96px;
@@ -1300,9 +1592,11 @@
         left: -48px;
         transform: translateY(-113px);
       }
+
       .node .label {
         font-size: 0.52rem;
       }
+
       .node .label strong {
         font-size: 0.65rem;
       }
@@ -1310,17 +1604,50 @@
 
     /* ─── Tablet Layout (under 980px) ─── */
     @media (max-width: 980px) {
-      .nav { top: 10px; border-radius: 20px; padding: 0.7rem 0.8rem; }
-      .nav-links { display: none; }
-      .nav-cta { font-size: 0.8rem; padding: 0.65rem 1.1rem; }
+      .nav {
+        top: 10px;
+        border-radius: 20px;
+        padding: 0.7rem 0.8rem;
+      }
 
-      .section-head { grid-template-columns: 1fr; gap: 1rem; }
-      .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .mission-grid { grid-template-columns: 1fr; }
-      .values-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-      .process-track { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem 0; }
-      .process-track::before { display: none; }
-      .workbench { grid-template-columns: 1fr; }
+      .nav-links {
+        display: none;
+      }
+
+      .nav-cta {
+        font-size: 0.8rem;
+        padding: 0.65rem 1.1rem;
+      }
+
+      .section-head {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .mission-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .values-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .process-track {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem 0;
+      }
+
+      .process-track::before {
+        display: none;
+      }
+
+      .workbench {
+        grid-template-columns: 1fr;
+      }
     }
 
     /* ─── Hero Collapse to Single Column (under 880px) ─── */
@@ -1329,16 +1656,20 @@
         grid-template-columns: 1fr;
         gap: 3rem;
       }
+
       .hero {
         padding: 6rem 1rem 2.5rem;
       }
+
       .hero-visual {
         min-height: 350px;
       }
+
       .node-ring {
         width: 300px;
         height: 300px;
       }
+
       .node {
         width: 88px;
         height: 88px;
@@ -1346,9 +1677,11 @@
         left: -44px;
         transform: translateY(-106px);
       }
+
       .node .label {
         font-size: 0.5rem;
       }
+
       .node .label strong {
         font-size: 0.6rem;
       }
@@ -1356,42 +1689,122 @@
 
     /* ─── Mobile ─── */
     @media (max-width: 640px) {
-      .nav { width: calc(100% - 14px); padding: 0.65rem 0.65rem 0.65rem 0.9rem; }
-      .brand { font-size: 0.85rem; letter-spacing: 0.06em; }
-      .nav-cta { font-size: 0.72rem; padding: 0.55rem 0.9rem; }
+      .nav {
+        width: calc(100% - 14px);
+        padding: 0.65rem 0.65rem 0.65rem 0.9rem;
+      }
 
-      .hero { padding: 5.5rem 1rem 2rem; }
-      h1 { font-size: clamp(2.8rem, 15vw, 4.2rem); }
-      .hero-visual { min-height: 280px; }
-      .node-ring { width: 240px; height: 240px; }
-      .node { width: 80px; height: 80px; top: -40px; left: -40px; transform: translateY(-80px); }
+      .brand {
+        font-size: 0.85rem;
+        letter-spacing: 0.06em;
+      }
 
-      .hero-stats { grid-template-columns: 1fr; }
+      .nav-cta {
+        font-size: 0.72rem;
+        padding: 0.55rem 0.9rem;
+      }
 
-      .section { width: calc(100% - 1.6rem); padding: 4rem 0; }
+      .hero {
+        padding: 5.5rem 1rem 2rem;
+      }
 
-      .services-grid { grid-template-columns: 1fr; }
-      .values-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .process-track { grid-template-columns: 1fr; gap: 1.8rem 0; }
+      h1 {
+        font-size: clamp(2.8rem, 15vw, 4.2rem);
+      }
 
-      .service-card { min-height: 300px; padding: 1.4rem; }
+      .hero-visual {
+        min-height: 280px;
+      }
 
-      .form-grid { grid-template-columns: 1fr; }
+      .node-ring {
+        width: 240px;
+        height: 240px;
+      }
 
-      .footer { flex-direction: column; text-align: center; }
-      .footer-links { gap: 1rem; flex-wrap: wrap; justify-content: center; }
+      .node {
+        width: 80px;
+        height: 80px;
+        top: -40px;
+        left: -40px;
+        transform: translateY(-80px);
+      }
+
+      .hero-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        width: calc(100% - 1.6rem);
+        padding: 4rem 0;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .values-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .process-track {
+        grid-template-columns: 1fr;
+        gap: 1.8rem 0;
+      }
+
+      .service-card {
+        min-height: 300px;
+        padding: 1.4rem;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-links {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
     }
 
     @media (max-width: 420px) {
-      .hero { padding: 5rem 0.8rem 1.5rem; }
-      .hero-visual { min-height: 240px; }
-      .node-ring { width: 200px; height: 200px; }
-      .node { width: 68px; height: 68px; top: -34px; left: -34px; transform: translateY(-66px); }
-      .node .label { font-size: 0.48rem; }
-      .values-grid { grid-template-columns: 1fr; }
+      .hero {
+        padding: 5rem 0.8rem 1.5rem;
+      }
+
+      .hero-visual {
+        min-height: 240px;
+      }
+
+      .node-ring {
+        width: 200px;
+        height: 200px;
+      }
+
+      .node {
+        width: 68px;
+        height: 68px;
+        top: -34px;
+        left: -34px;
+        transform: translateY(-66px);
+      }
+
+      .node .label {
+        font-size: 0.48rem;
+      }
+
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
+
 <body>
   <div class="ambient-glows" aria-hidden="true">
     <div class="glow-orb glow-1"></div>
@@ -1426,7 +1839,9 @@
             <span class="line-3"><span class="scramble-target" data-value="SYNDRIX">Intelligence</span></span>
           </h1>
           <p class="hero-copy reveal is-visible delay-2">
-            SYNDRIX is an engineering-driven company specializing in custom electronic systems, embedded technologies, product development, PCB design, and intelligent hardware solutions. We bridge the gap between innovative ideas and reliable real-world products through precision engineering and intelligent problem-solving.
+            SYNDRIX is an engineering-driven company specializing in custom electronic systems, embedded technologies,
+            product development, PCB design, and intelligent hardware solutions. We bridge the gap between innovative
+            ideas and reliable real-world products through precision engineering and intelligent problem-solving.
           </p>
           <div class="hero-actions reveal is-visible delay-3">
             <a href="#contact" class="btn btn-primary">Request a consultation</a>
@@ -1475,18 +1890,21 @@
           <p class="kicker">Brand Foundation</p>
           <h2 id="about-title">Intelligence meets engineering.</h2>
         </div>
-        <p>We engineer intelligent electronic systems tailored to real-world requirements. From concept to deployment, every solution is designed with precision and purpose.</p>
+        <p>We engineer intelligent electronic systems tailored to real-world requirements. From concept to deployment,
+          every solution is designed with precision and purpose.</p>
       </div>
 
       <!-- Mission & Vision -->
       <div class="mission-grid">
         <div class="mission-card reveal delay-1">
           <h3>Mission</h3>
-          <p>To transform ideas into reliable electronic systems through intelligent engineering and precision execution.</p>
+          <p>To transform ideas into reliable electronic systems through intelligent engineering and precision
+            execution.</p>
         </div>
         <div class="mission-card reveal delay-2">
           <h3>Vision</h3>
-          <p>To become a trusted engineering partner for innovators, startups, research organizations, and industries seeking advanced electronic solutions.</p>
+          <p>To become a trusted engineering partner for innovators, startups, research organizations, and industries
+            seeking advanced electronic solutions.</p>
         </div>
       </div>
 
@@ -1495,7 +1913,9 @@
         <div class="value-card reveal delay-1">
           <div class="value-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" color="#c4863f">
-              <circle cx="12" cy="12" r="3"/><path d="M12 2v4m0 12v4M2 12h4m12 0h4m-2.93-7.07-2.83 2.83m-8.48 8.48-2.83 2.83m0-14.14 2.83 2.83m8.48 8.48 2.83 2.83"/>
+              <circle cx="12" cy="12" r="3" />
+              <path
+                d="M12 2v4m0 12v4M2 12h4m12 0h4m-2.93-7.07-2.83 2.83m-8.48 8.48-2.83 2.83m0-14.14 2.83 2.83m8.48 8.48 2.83 2.83" />
             </svg>
           </div>
           <h4>Precision</h4>
@@ -1504,7 +1924,8 @@
         <div class="value-card reveal delay-2">
           <div class="value-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" color="#5ec5bd">
-              <path d="M9.663 17h4.673M12 3v1m6.364 1.636-.707.707M21 12h-1M4 12H3m3.343-5.657-.707-.707m2.828 9.9a5 5 0 1 1 7.072 0l-.548.547A3.374 3.374 0 0 0 14 18.469V19a2 2 0 1 1-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547Z"/>
+              <path
+                d="M9.663 17h4.673M12 3v1m6.364 1.636-.707.707M21 12h-1M4 12H3m3.343-5.657-.707-.707m2.828 9.9a5 5 0 1 1 7.072 0l-.548.547A3.374 3.374 0 0 0 14 18.469V19a2 2 0 1 1-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547Z" />
             </svg>
           </div>
           <h4>Intelligence</h4>
@@ -1513,7 +1934,8 @@
         <div class="value-card reveal delay-3">
           <div class="value-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" color="#c4863f">
-              <path d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"/>
+              <path
+                d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
             </svg>
           </div>
           <h4>Reliability</h4>
@@ -1522,7 +1944,7 @@
         <div class="value-card reveal delay-4">
           <div class="value-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" color="#5ec5bd">
-              <path d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"/>
+              <path d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" />
             </svg>
           </div>
           <h4>Innovation</h4>
@@ -1531,7 +1953,8 @@
         <div class="value-card reveal delay-5">
           <div class="value-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" color="#c4863f">
-              <path d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"/>
+              <path
+                d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
             </svg>
           </div>
           <h4>Partnership</h4>
@@ -1542,7 +1965,8 @@
       <!-- Brand Promise -->
       <div class="promise-banner reveal">
         <div class="bg-grid"></div>
-        <blockquote>"We engineer custom electronic solutions that combine innovation, reliability, and technical excellence."</blockquote>
+        <blockquote>"We engineer custom electronic solutions that combine innovation, reliability, and technical
+          excellence."</blockquote>
         <p class="promise-label">— Brand Promise</p>
       </div>
     </section>
@@ -1554,7 +1978,8 @@
           <p class="kicker">Service Architecture</p>
           <h2 id="services-title">Four disciplines, one engineering partner.</h2>
         </div>
-        <p>SYNDRIX aligns circuit design, embedded development, validation, and production support into a single unified engineering workflow — from first schematic to final deployment.</p>
+        <p>SYNDRIX aligns circuit design, embedded development, validation, and production support into a single unified
+          engineering workflow — from first schematic to final deployment.</p>
       </div>
 
       <div class="services-grid">
@@ -1565,7 +1990,8 @@
           <div style="position:relative;z-index:2">
             <p class="kicker">Design</p>
             <h3>Circuit Design, PCB Design, Hardware Architecture.</h3>
-            <p>Schematic capture, multi-layer PCB layout, hardware architecture, power distribution, and signal integrity — engineered for reliability and manufacturability.</p>
+            <p>Schematic capture, multi-layer PCB layout, hardware architecture, power distribution, and signal
+              integrity — engineered for reliability and manufacturability.</p>
             <div class="tag-list">
               <span class="tag">Circuit Design</span>
               <span class="tag">PCB Design</span>
@@ -1581,7 +2007,8 @@
           <div style="position:relative;z-index:2">
             <p class="kicker">Development</p>
             <h3>Embedded Systems, Firmware Development, IoT Solutions.</h3>
-            <p>Embedded firmware, real-time operating systems, IoT connectivity, sensor integration, and communication protocols that perform consistently in real-world environments.</p>
+            <p>Embedded firmware, real-time operating systems, IoT connectivity, sensor integration, and communication
+              protocols that perform consistently in real-world environments.</p>
             <div class="tag-list">
               <span class="tag">Embedded Systems</span>
               <span class="tag">Firmware Development</span>
@@ -1597,7 +2024,8 @@
           <div style="position:relative;z-index:2">
             <p class="kicker">Validation</p>
             <h3>Testing, Debugging, Performance Verification.</h3>
-            <p>Rigorous functional testing, systematic debugging, signal analysis, EMC compliance, and performance verification to ensure every system meets specification.</p>
+            <p>Rigorous functional testing, systematic debugging, signal analysis, EMC compliance, and performance
+              verification to ensure every system meets specification.</p>
             <div class="tag-list">
               <span class="tag">Testing</span>
               <span class="tag">Debugging</span>
@@ -1613,7 +2041,8 @@
           <div style="position:relative;z-index:2">
             <p class="kicker">Production</p>
             <h3>Prototyping, Manufacturing Support, Product Optimization.</h3>
-            <p>Rapid prototyping, BOM generation, manufacturing documentation, Gerber files, production support, and product optimization for seamless scale-up.</p>
+            <p>Rapid prototyping, BOM generation, manufacturing documentation, Gerber files, production support, and
+              product optimization for seamless scale-up.</p>
             <div class="tag-list">
               <span class="tag">Prototyping</span>
               <span class="tag">Manufacturing Support</span>
@@ -1631,14 +2060,16 @@
           <p class="kicker">How we engineer</p>
           <h2 id="process-title">From concept to deployment. Precision at every step.</h2>
         </div>
-        <p>A rigorous engineering process for innovators, startups, research organizations, and industries seeking advanced electronic solutions on a predictable timeline.</p>
+        <p>A rigorous engineering process for innovators, startups, research organizations, and industries seeking
+          advanced electronic solutions on a predictable timeline.</p>
       </div>
 
       <div class="process-track">
         <article class="step-item reveal-l delay-1">
           <div class="step-marker">1</div>
           <h3>Scope</h3>
-          <p>Define requirements, technical constraints, performance targets, component selection, and deployment environment.</p>
+          <p>Define requirements, technical constraints, performance targets, component selection, and deployment
+            environment.</p>
         </article>
         <article class="step-item reveal-l delay-2">
           <div class="step-marker">2</div>
@@ -1653,7 +2084,8 @@
         <article class="step-item reveal-l delay-4">
           <div class="step-marker">4</div>
           <h3>Deploy</h3>
-          <p>Deliver production-ready designs, manufacturing files, firmware binaries, and comprehensive documentation.</p>
+          <p>Deliver production-ready designs, manufacturing files, firmware binaries, and comprehensive documentation.
+          </p>
         </article>
       </div>
     </section>
@@ -1665,7 +2097,8 @@
           <p class="kicker">The Workbench</p>
           <h2 id="workbench-title">Precision tools for intelligent engineering.</h2>
         </div>
-        <p>From concept to deployment, every solution is designed with precision and purpose. We choose the most reliable tool for each surface — circuit, firmware, or production.</p>
+        <p>From concept to deployment, every solution is designed with precision and purpose. We choose the most
+          reliable tool for each surface — circuit, firmware, or production.</p>
       </div>
 
       <div class="workbench">
@@ -1697,28 +2130,32 @@
             <div class="icon">D</div>
             <div>
               <h3>Circuit & PCB Design packages</h3>
-              <p>Schematic capture, multi-layer PCB layout, hardware architecture, component selection, BOM generation, and Gerber files ready for manufacturing.</p>
+              <p>Schematic capture, multi-layer PCB layout, hardware architecture, component selection, BOM generation,
+                and Gerber files ready for manufacturing.</p>
             </div>
           </article>
           <article class="deliverable reveal-r delay-2">
             <div class="icon">E</div>
             <div>
               <h3>Embedded Systems & Firmware Development</h3>
-              <p>Microcontroller firmware, RTOS integration, sensor drivers, communication protocols, and IoT connectivity built for real-world performance.</p>
+              <p>Microcontroller firmware, RTOS integration, sensor drivers, communication protocols, and IoT
+                connectivity built for real-world performance.</p>
             </div>
           </article>
           <article class="deliverable reveal-r delay-3">
             <div class="icon">V</div>
             <div>
               <h3>Testing & Performance Verification</h3>
-              <p>Functional testing, signal analysis, debugging, EMC compliance, and performance verification to ensure every system meets specification.</p>
+              <p>Functional testing, signal analysis, debugging, EMC compliance, and performance verification to ensure
+                every system meets specification.</p>
             </div>
           </article>
           <article class="deliverable reveal-r delay-4">
             <div class="icon">P</div>
             <div>
               <h3>Prototyping & Manufacturing Support</h3>
-              <p>Rapid prototyping, manufacturing documentation, product optimization, and production support for seamless transition from lab to factory.</p>
+              <p>Rapid prototyping, manufacturing documentation, product optimization, and production support for
+                seamless transition from lab to factory.</p>
             </div>
           </article>
         </div>
@@ -1732,7 +2169,9 @@
         <div style="position:relative;z-index:2">
           <p class="kicker">Free consultation</p>
           <h2 id="contact-title">Bring a concept. Leave with an engineering direction.</h2>
-          <p>Tell SYNDRIX what you need engineered — custom electronics, embedded system, PCB design, IoT solution, or a complete product development package. The initial consultation is free so you can evaluate the fit before committing.</p>
+          <p>Tell SYNDRIX what you need engineered — custom electronics, embedded system, PCB design, IoT solution, or a
+            complete product development package. The initial consultation is free so you can evaluate the fit before
+            committing.</p>
           <form class="contact-form" id="contactForm">
             <label class="skip-link" for="nameInput">Name</label>
             <label class="skip-link" for="emailInput">Email Address</label>
@@ -1744,10 +2183,13 @@
               <input id="nameInput" name="name" type="text" placeholder="Name" autocomplete="name" required>
               <input id="emailInput" name="email" type="email" placeholder="Email" autocomplete="email" required>
               <input id="companyInput" name="company" type="text" placeholder="Company" autocomplete="organization">
-              <input id="budgetInput" name="budget" type="text" placeholder="Budget (e.g., ₹50K - ₹2L)" autocomplete="off">
+              <input id="budgetInput" name="budget" type="text" placeholder="Budget (e.g., ₹50K - ₹2L)"
+                autocomplete="off">
             </div>
 
-            <input id="projectInput" name="project" type="text" placeholder="Custom sensor board + embedded firmware for environmental monitoring…" autocomplete="off" required>
+            <input id="projectInput" name="project" type="text"
+              placeholder="Custom sensor board + embedded firmware for environmental monitoring…" autocomplete="off"
+              required>
 
             <button class="btn btn-primary submit-btn" type="submit">Start my project</button>
             <p class="form-note">No commitment. No spam. Just a clear engineering direction.</p>
@@ -1759,7 +2201,8 @@
 
   <!-- ─── Closing Statement (from Brand Guidelines) ─── -->
   <div class="section closing-statement reveal">
-    <p>SYNDRIX stands at the intersection of intelligence and engineering, transforming concepts into dependable electronic solutions through precision, innovation, and technical excellence.</p>
+    <p>SYNDRIX stands at the intersection of intelligence and engineering, transforming concepts into dependable
+      electronic solutions through precision, innovation, and technical excellence.</p>
     <span class="tagline">Engineered with Intelligence.</span>
   </div>
 
@@ -1775,7 +2218,8 @@
 
   </footer>
 
-  <div id="toast" role="status" aria-live="polite">Project inquiry captured. SYNDRIX will follow up with a clear engineering direction.</div>
+  <div id="toast" role="status" aria-live="polite">Project inquiry captured. SYNDRIX will follow up with a clear
+    engineering direction.</div>
 
   <script>
     const canvas = document.getElementById('ambientCanvas');
@@ -1905,7 +2349,7 @@
         idea: projectInput ? projectInput.value : ''
       };
 
-      fetch('https://a6e5-2401-4900-1cc9-a0fd-6cae-2e40-da93-f34c.ngrok-free.app/webhook-test/lead', {
+      fetch('https://a6e5-2401-4900-1cc9-a0fd-6cae-2e40-da93-f34c.ngrok-free.app/webhook/lead', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -1947,14 +2391,14 @@
         this.stop();
         await this.erase();
         await this.pause(this.delayPause);
-        
+
         // Dynamically shift color before typing
         if (targetText === 'SYNDRIX') {
           this.el.classList.add('state-syndrix');
         } else {
           this.el.classList.remove('state-syndrix');
         }
-        
+
         await this.type(targetText);
       }
       stop() {
@@ -2001,7 +2445,7 @@
       const originalText = scrambleTarget.innerText;
       const targetText = scrambleTarget.getAttribute('data-value');
       const typewriter = new Typewriter(scrambleTarget);
-      
+
       const startLoop = async () => {
         // Wait 3.5 seconds initial delay on page load before starting
         await typewriter.pause(3500);
@@ -2119,7 +2563,7 @@
           const id = e.target.getAttribute('id');
           const href = `#${id}`;
           const matched = Array.from(links).find(l => l.getAttribute('href') === href);
-          
+
           links.forEach(l => l.classList.remove('active'));
           if (matched) {
             matched.classList.add('active');
@@ -2148,4 +2592,5 @@
     });
   </script>
 </body>
+
 </html>

@@ -1094,10 +1094,15 @@
       z-index: 2;
     }
 
-    .form-row {
+    .form-grid {
       display: grid;
-      grid-template-columns: 1fr auto;
+      grid-template-columns: repeat(2, 1fr);
       gap: 0.75rem;
+    }
+    .submit-btn {
+      width: 100%;
+      min-height: 54px;
+      margin-top: 0.5rem;
     }
 
     .contact-form input {
@@ -1371,7 +1376,7 @@
 
       .service-card { min-height: 300px; padding: 1.4rem; }
 
-      .form-row { grid-template-columns: 1fr; }
+      .form-grid { grid-template-columns: 1fr; }
 
       .footer { flex-direction: column; text-align: center; }
       .footer-links { gap: 1rem; flex-wrap: wrap; justify-content: center; }
@@ -1729,11 +1734,22 @@
           <h2 id="contact-title">Bring a concept. Leave with an engineering direction.</h2>
           <p>Tell SYNDRIX what you need engineered — custom electronics, embedded system, PCB design, IoT solution, or a complete product development package. The initial consultation is free so you can evaluate the fit before committing.</p>
           <form class="contact-form" id="contactForm">
+            <label class="skip-link" for="nameInput">Name</label>
+            <label class="skip-link" for="emailInput">Email Address</label>
+            <label class="skip-link" for="companyInput">Company</label>
+            <label class="skip-link" for="budgetInput">Project Budget</label>
             <label class="skip-link" for="projectInput">Describe your project</label>
-            <div class="form-row">
-              <input id="projectInput" name="project" type="text" placeholder="Custom sensor board + embedded firmware for environmental monitoring…" autocomplete="off" required>
-              <button class="btn btn-primary" type="submit">Start my project</button>
+
+            <div class="form-grid">
+              <input id="nameInput" name="name" type="text" placeholder="Name" autocomplete="name" required>
+              <input id="emailInput" name="email" type="email" placeholder="Email" autocomplete="email" required>
+              <input id="companyInput" name="company" type="text" placeholder="Company" autocomplete="organization">
+              <input id="budgetInput" name="budget" type="text" placeholder="Budget (e.g., $10K - $25K)" autocomplete="off">
             </div>
+
+            <input id="projectInput" name="project" type="text" placeholder="Custom sensor board + embedded firmware for environmental monitoring…" autocomplete="off" required>
+
+            <button class="btn btn-primary submit-btn" type="submit">Start my project</button>
             <p class="form-note">No commitment. No spam. Just a clear engineering direction.</p>
           </form>
         </div>
@@ -1869,11 +1885,36 @@
       navbar.style.background = window.scrollY > 60 ? 'rgba(12, 11, 9, 0.82)' : 'rgba(12, 11, 9, 0.64)';
     }, { passive: true });
 
-    // Form toast
+    // Form toast & Webhook POST
     const form = document.getElementById('contactForm');
     const toast = document.getElementById('toast');
     form.addEventListener('submit', (e) => {
       e.preventDefault();
+
+      const nameInput = document.getElementById('nameInput');
+      const emailInput = document.getElementById('emailInput');
+      const companyInput = document.getElementById('companyInput');
+      const budgetInput = document.getElementById('budgetInput');
+      const projectInput = document.getElementById('projectInput');
+
+      const payload = {
+        name: nameInput ? nameInput.value : '',
+        email: emailInput ? emailInput.value : '',
+        company: companyInput ? companyInput.value : '',
+        budget: budgetInput ? budgetInput.value : '',
+        idea: projectInput ? projectInput.value : ''
+      };
+
+      fetch('http://localhost:5678/webhook-test/lead', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      }).catch(err => {
+        console.error('Webhook post failed:', err);
+      });
+
       toast.classList.add('show');
       form.reset();
       setTimeout(() => toast.classList.remove('show'), 3600);
